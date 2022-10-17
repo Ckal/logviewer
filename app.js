@@ -17,23 +17,19 @@ app.get("/", (req, res, next) => {
 // API path to get current log
 app.get("/api/getlog", (req, res, next) => {
   let rawdata = fs.readFileSync("./logs/onlineLog.log");
-  let student = JSON.stringify(rawdata);
-  let datas = { data: student };
+  let student = JSON.parse(rawdata);
+  var datas = JSON.stringify(student);
 
-  //res.json(student);
+  let obj = {
+    table: [],
+  };
+  obj.table.push(rawdata);
+  // res.json(student);
   res.writeHead(200, { "Content-Type": "text/json" });
-  res.end(rawdata);
+  res.write(JSON.stringify(obj));
+  res.end();
   return;
 });
-
-
-fs.readFile('results.json', function (err, data) {
-    var json = JSON.parse(data)
-    json.push('search result: ' + currentSearchResult)
-
-    fs.writeFile("results.json", JSON.stringify(json))
-})
-
 
 // API path to get current log
 app.get("/api/getlogs", (req, res, next) => {
