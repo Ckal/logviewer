@@ -4,7 +4,10 @@ const winston = require("winston");
 const customFormat = format.combine(
   format.timestamp({ format: "MMM-DD-YYYY HH:mm:ss" }),
   format.align(),
-  format.printf((i) => `{${i.level}: ${[i.timestamp]}: ${i.message}}`)
+  format.printf(
+    (i) =>
+      `{"timstamp" : "${[i.timestamp]}", "level" : "${i.level}", "message": "${i.message}"}`
+  )
 );
 
 const onlineFormat = format.combine(
