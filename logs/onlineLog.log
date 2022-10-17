@@ -1,2 +1,4 @@
 {"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
-{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	info: 123 "}{	"{loglevel:error},{m:erl}}
+{	"{loglevel:error},{m:erl}}
+{	"{loglevel:error},{m:erl}}

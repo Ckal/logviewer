@@ -15,7 +15,7 @@ app.get("/", (req, res, next) => {
 });
 
 // API path to get current log
-app.get("/a", (req, res, next) => {
+app.get("/api/getlog", (req, res, next) => {
   let rawdata = fs.readFileSync("./logs/onlineLog.log", "utf8");
   //let student = JSON.parse(rawdata);
   // student.data.push("www", "sdf");
@@ -31,7 +31,10 @@ app.get("/a", (req, res, next) => {
   data = JSON.stringify(obj)
     .replaceAll('\\"', '"')
     .replaceAll("\\t", "")
-    .replaceAll("\\n", "");
+    .replaceAll("\\n", "")
+    .replaceAll("}{", "},{")
+    .replaceAll('["{', "[{")
+    .replaceAll('}"]', "}]");
   //res.json(data);
   //res.writeHead(200, { "Content-Type": "text/json" });
   res.write(data);
