@@ -10,20 +10,131 @@
 {info: Oct-17-2022 13:37:59: 	Server Started in port : 3000!}
 {info: Oct-17-2022 14:01:32: 	Server Started in port : 3000!}
 {info: Oct-17-2022 14:12:08: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:14:17: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:14:46: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:17:29: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:17:31: 	Server got : /!}
-{info: Oct-17-2022 14:17:31: 	Server got : /!}
-{info: Oct-17-2022 14:17:36: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:19:15: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:19:22: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:19:41: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:19:43: 	Server got : /!}
-{info: Oct-17-2022 14:19:43: 	Server got : /!}
-{info: Oct-17-2022 14:19:58: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:20:09: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:20:31: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:20:40: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:21:10: 	Server Started in port : 3000!}
-{info: Oct-17-2022 14:21:40: 	Server Started in port : 3000!}
+{info: Oct-17-2022 14:26:34: 	Server Started in port : 3000!}
+{info: Oct-17-2022 14:28:30: 	Server Started in port : 3000!}
+{info: Oct-17-2022 14:36:40: 	Server Started in port : 3000!}
+{info: Oct-17-2022 14:37:09: 	{
+  "data": [
+    {
+      "name": "Tiger Nixon",
+      "position": "System Architect",
+      "salary": "$320,800",
+      "start_date": "2011/04/25",
+      "office": "Edinburgh",
+      "extn": "5421"
+    },
+    {
+      "name": "Garrett Winters",
+      "position": "Accountant",
+      "salary": "$170,750",
+      "start_date": "2011/07/25",
+      "office": "Tokyo",
+      "extn": "8422"
+    }
+  ]
+}}
+{info: Oct-17-2022 14:37:35: 	Server Started in port : 3000!}
+{info: Oct-17-2022 14:37:38: 	{
+  "data": [
+    {
+      "name": "Tiger Nixon",
+      "position": "System Architect",
+      "salary": "$320,800",
+      "start_date": "2011/04/25",
+      "office": "Edinburgh",
+      "extn": "5421"
+    },
+    {
+      "name": "Garrett Winters",
+      "position": "Accountant",
+      "salary": "$170,750",
+      "start_date": "2011/07/25",
+      "office": "Tokyo",
+      "extn": "8422"
+    }
+  ]
+}}
+{info: Oct-17-2022 14:38:12: 	Server Started in port : 3000!}
+{info: Oct-17-2022 14:38:13: 	{
+  "data": [
+    {
+      "name": "Tiger Nixon",
+      "position": "System Architect",
+      "salary": "$320,800",
+      "start_date": "2011/04/25",
+      "office": "Edinburgh",
+      "extn": "5421"
+    },
+    {
+      "name": "Garrett Winters",
+      "position": "Accountant",
+      "salary": "$170,750",
+      "start_date": "2011/07/25",
+      "office": "Tokyo",
+      "extn": "8422"
+    }
+  ]
+}}
+{info: Oct-17-2022 14:38:28: 	Server Started in port : 3000!}
+{info: Oct-17-2022 14:38:29: 	{
+  "data": [
+    {
+      "name": "Tiger Nixon",
+      "position": "System Architect",
+      "salary": "$320,800",
+      "start_date": "2011/04/25",
+      "office": "Edinburgh",
+      "extn": "5421"
+    },
+    {
+      "name": "Garrett Winters",
+      "position": "Accountant",
+      "salary": "$170,750",
+      "start_date": "2011/07/25",
+      "office": "Tokyo",
+      "extn": "8422"
+    }
+  ]
+}}
+{info: Oct-17-2022 14:38:36: 	Server Started in port : 3000!}
+{info: Oct-17-2022 14:38:38: 	{
+  "data": [
+    {
+      "name": "Tiger Nixon",
+      "position": "System Architect",
+      "salary": "$320,800",
+      "start_date": "2011/04/25",
+      "office": "Edinburgh",
+      "extn": "5421"
+    },
+    {
+      "name": "Garrett Winters",
+      "position": "Accountant",
+      "salary": "$170,750",
+      "start_date": "2011/07/25",
+      "office": "Tokyo",
+      "extn": "8422"
+    }
+  ]
+}}
+{info: Oct-17-2022 14:42:03: 	Server Started in port : 3000!}
+{info: Oct-17-2022 14:42:06: 	{
+  "data": [
+    {
+      "name": "Tiger Nixon",
+      "position": "System Architect",
+      "salary": "$320,800",
+      "start_date": "2011/04/25",
+      "office": "Edinburgh",
+      "extn": "5421"
+    },
+    {
+      "name": "Garrett Winters",
+      "position": "Accountant",
+      "salary": "$170,750",
+      "start_date": "2011/07/25",
+      "office": "Tokyo",
+      "extn": "8422"
+    }
+  ]
+}}

@@ -15,18 +15,22 @@ app.get("/", (req, res, next) => {
 });
 
 // API path to get current log
-app.get("/api/getlog", (req, res, next) => {
+app.get("/a", (req, res, next) => {
   let rawdata = fs.readFileSync("./logs/onlineLog.log");
   let student = JSON.parse(rawdata);
-  var datas = JSON.stringify(student);
+  student.data.push("www", "sdf");
+  let data = JSON.stringify(student);
+  fs.writeFileSync("./logs/onlineLog.log", data);
 
+  var datas = JSON.stringify(student);
+  appLogger.info(rawdata);
   let obj = {
-    table: [],
+    data: [],
   };
-  obj.table.push(rawdata);
+  // obj.table.push(student);
   // res.json(student);
   res.writeHead(200, { "Content-Type": "text/json" });
-  res.write(JSON.stringify(obj));
+  res.write(data);
   res.end();
   return;
 });
