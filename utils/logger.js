@@ -1,50 +1,45 @@
 const { createLogger, format, transports } = require("winston");
-const winston = require("winston");
 
 const customFormat = format.combine(
   format.timestamp({ format: "MMM-DD-YYYY HH:mm:ss" }),
   format.align(),
-  format.printf((i) => `${i.level}: ${[i.timestamp]}: ${i.message}`)
+  format.printf(
+    (i) =>
+      `{"timstamp" : "${[i.timestamp]}", "level" : "${i.level}", "message": "${
+        i.message
+      }"}`
+  )
 );
 
-const usersLogger = createLogger({
-  transports: [
-    new transports.File({
-      filename: "logs/usersLog.log",
-      format: customFormat
-    }),
-    new transports.Console({
-      format: customFormat
-    })
-  ]
-});
+const onlineFormat = format.combine(format.printf((i) => `${i.message}`));
 
-const authLogger = createLogger({
+const onlineLogger = createLogger({
   transports: [
     new transports.File({
-      filename: "logs/authLog.log",
-      format: customFormat
+      filename: "logs/onlineLog.log",
+      format: onlineFormat,
     }),
     new transports.Console({
-      format: customFormat
-    })
-  ]
+      format: onlineFormat,
+    }),
+  ],
 });
 
 const appLogger = createLogger({
   transports: [
     new transports.File({
       filename: "logs/appLog.log",
-      format: customFormat
+      format: customFormat,
+      json: true,
+      stringify: (obj) => JSON.stringify(obj),
     }),
     new transports.Console({
-      format: customFormat
-    })
-  ]
+      format: customFormat,
+    }),
+  ],
 });
 
 module.exports = {
-  usersLogger: usersLogger,
-  authLogger: authLogger,
-  appLogger: appLogger
+  onlineLogger: onlineLogger,
+  appLogger: appLogger,
 };

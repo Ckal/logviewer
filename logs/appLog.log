@@ -1,1285 +1,190 @@
-info: Oct-17-2022 10:58:02: 	Server Started in port : 3000!
-info: Oct-17-2022 10:58:07: 	Server gotd : /logviewer!
-info: Oct-17-2022 10:58:07: 	Server gotss : Error: ENOENT: no such file or directory, open './utils/logviewer.html'!Error: ENOENT: no such file or directory, open './utils/logviewer.html'
-info: Oct-17-2022 10:59:01: 	Server Started in port : 3000!
-info: Oct-17-2022 10:59:07: 	Server gotd : /logviewer!
-info: Oct-17-2022 10:59:07: 	Server gotss : !{asdasdasd}
-<table id="example"></table>
-<script>
-$(document).ready(function() {
-  $('#example').DataTable( {
-    processing: true,
-    ajax: {
-      url:"https://raw.githubusercontent.com/silverwind/oui/master/oui.json"
-   
-    },
-    deferRender: true,
-
-    select: true,
-/*     buttons: [
-      "selectRows",
-      "selectColumns",
-      "selectCells",
-      "selectNone"
-    ], */
-    order: [],
-    columnDefs: [{
-      targets: 'no-sort',
-      orderable: false,
-    }]
-  } );
-} );
-
-</script>
-info: Oct-17-2022 10:59:38: 	Server gotd : /logviewer!
-info: Oct-17-2022 10:59:38: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-  </body>
-</html>
-
-info: Oct-17-2022 11:00:02: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:00:02: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-  </body>
-</html>
-
-info: Oct-17-2022 11:00:16: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:00:16: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-  </body>
-</html>
-
-info: Oct-17-2022 11:00:53: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:00:53: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-<sctipt>
-    var columns = [];
-
-    function getDT() {
-        $.ajax({
-          url: "/ssp/objects.php",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({data: columnNames[i], 
-                        title: capitalizeFirstLetter(columnNames[i])});
-            }
-          $('#example').DataTable( {
-              data: data.data,
-            columns: columns
-          } );
-          }
-        });
-    }
-    
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-    
-    $(document).ready(function() {
-      
-      
-      getDT();
-    
-      
-    } );
-    
-    
-    
-</script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-  </body>
-</html>
-
-info: Oct-17-2022 11:01:12: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:01:12: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <script>
-      var columns = [];
-
-      function getDT() {
-        $.ajax({
-          url: "/ssp/objects.php",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-  </body>
-</html>
-
-info: Oct-17-2022 11:01:31: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:01:31: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <script>
-      var columns = [];
-      alert();
-      function getDT() {
-        $.ajax({
-          url: "/ssp/objects.php",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-  </body>
-</html>
-
-info: Oct-17-2022 11:01:54: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:01:54: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/ssp/objects.php",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:02:39: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:02:39: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:02:57: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:02:57: 	Server gotss : !{asdasdasd}
-<table id="example"></table>
-<script>
-$(document).ready(function() {
-  $('#example').DataTable( {
-    processing: true,
-    ajax: {
-      url:"https://raw.githubusercontent.com/silverwind/oui/master/oui.json"
-   
-    },
-    deferRender: true,
-
-    select: true,
-/*     buttons: [
-      "selectRows",
-      "selectColumns",
-      "selectCells",
-      "selectNone"
-    ], */
-    order: [],
-    columnDefs: [{
-      targets: 'no-sort',
-      orderable: false,
-    }]
-  } );
-} );
-
-</script>
-info: Oct-17-2022 11:03:23: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:03:23: 	Server gotss : !{asdasdasd}
-<table id="example"></table>
-<script>
-$(document).ready(function() {
-  $('#example').DataTable( {
-    processing: true,
-    ajax: {
-      url:"https://raw.githubusercontent.com/silverwind/oui/master/oui.json"
-   
-    },
-    deferRender: true,
-
-    select: true,
-/*     buttons: [
-      "selectRows",
-      "selectColumns",
-      "selectCells",
-      "selectNone"
-    ], */
-    order: [],
-    columnDefs: [{
-      targets: 'no-sort',
-      orderable: false,
-    }]
-  } );
-} );
-
-</script>
-info: Oct-17-2022 11:03:44: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:03:44: 	Server gotss : !{asdasdasd}
-<table id="example"></table>
-<script>
-$(document).ready(function() {
-  $('#example').DataTable( {
-    processing: true,
-    ajax: {
-      url:"https://raw.githubusercontent.com/silverwind/oui/master/oui.json"
-   
-    },
-    deferRender: true,
-
-    select: true,
-/*     buttons: [
-      "selectRows",
-      "selectColumns",
-      "selectCells",
-      "selectNone"
-    ], */
-    order: [],
-    columnDefs: [{
-      targets: 'no-sort',
-      orderable: false,
-    }]
-  } );
-} );
-
-</script>
-info: Oct-17-2022 11:03:52: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:03:52: 	Server gotss : !{"draw":0,"recordsTotal":57,"recordsFiltered":57,"data":[{"first_name":"Tiger","last_name":"Nixon","position":"System Architect","office":"Edinburgh","start_date":"25th Apr 11","salary":"$320,800"},{"first_name":"Garrett","last_name":"Winters","position":"Accountant","office":"Tokyo","start_date":"25th Jul 11","salary":"$170,750"},{"first_name":"Ashton","last_name":"Cox","position":"Junior Technical Author","office":"San Francisco","start_date":"12th Jan 09","salary":"$86,000"},{"first_name":"Cedric","last_name":"Kelly","position":"Senior Javascript Developer","office":"Edinburgh","start_date":"29th Mar 12","salary":"$433,060"},{"first_name":"Airi","last_name":"Satou","position":"Accountant","office":"Tokyo","start_date":"28th Nov 08","salary":"$162,700"},{"first_name":"Brielle","last_name":"Williamson","position":"Integration Specialist","office":"New York","start_date":"2nd Dec 12","salary":"$372,000"},{"first_name":"Herrod","last_name":"Chandler","position":"Sales Assistant","office":"San Francisco","start_date":"6th Aug 12","salary":"$137,500"},{"first_name":"Rhona","last_name":"Davidson","position":"Integration Specialist","office":"Tokyo","start_date":"14th Oct 10","salary":"$327,900"},{"first_name":"Colleen","last_name":"Hurst","position":"Javascript Developer","office":"San Francisco","start_date":"15th Sep 09","salary":"$205,500"},{"first_name":"Sonya","last_name":"Frost","position":"Software Engineer","office":"Edinburgh","start_date":"13th Dec 08","salary":"$103,600"},{"first_name":"Jena","last_name":"Gaines","position":"Office Manager","office":"London","start_date":"19th Dec 08","salary":"$90,560"},{"first_name":"Quinn","last_name":"Flynn","position":"Support Lead","office":"Edinburgh","start_date":"3rd Mar 13","salary":"$342,000"},{"first_name":"Charde","last_name":"Marshall","position":"Regional Director","office":"San Francisco","start_date":"16th Oct 08","salary":"$470,600"},{"first_name":"Haley","last_name":"Kennedy","position":"Senior Marketing Designer","office":"London","start_date":"18th Dec 12","salary":"$313,500"},{"first_name":"Tatyana","last_name":"Fitzpatrick","position":"Regional Director","office":"London","start_date":"17th Mar 10","salary":"$385,750"},{"first_name":"Michael","last_name":"Silva","position":"Marketing Designer","office":"London","start_date":"27th Nov 12","salary":"$198,500"},{"first_name":"Paul","last_name":"Byrd","position":"Chief Financial Officer (CFO)","office":"New York","start_date":"9th Jun 10","salary":"$725,000"},{"first_name":"Gloria","last_name":"Little","position":"Systems Administrator","office":"New York","start_date":"10th Apr 09","salary":"$237,500"},{"first_name":"Bradley","last_name":"Greer","position":"Software Engineer","office":"London","start_date":"13th Oct 12","salary":"$132,000"},{"first_name":"Dai","last_name":"Rios","position":"Personnel Lead","office":"Edinburgh","start_date":"26th Sep 12","salary":"$217,500"},{"first_name":"Jenette","last_name":"Caldwell","position":"Development Lead","office":"New York","start_date":"3rd Sep 11","salary":"$345,000"},{"first_name":"Yuri","last_name":"Berry","position":"Chief Marketing Officer (CMO)","office":"New York","start_date":"25th Jun 09","salary":"$675,000"},{"first_name":"Caesar","last_name":"Vance","position":"Pre-Sales Support","office":"New York","start_date":"12th Dec 11","salary":"$106,450"},{"first_name":"Doris","last_name":"Wilder","position":"Sales Assistant","office":"Sidney","start_date":"20th Sep 10","salary":"$85,600"},{"first_name":"Angelica","last_name":"Ramos","position":"Chief Executive Officer (CEO)","office":"London","start_date":"9th Oct 09","salary":"$1,200,000"},{"first_name":"Gavin","last_name":"Joyce","position":"Developer","office":"Edinburgh","start_date":"22nd Dec 10","salary":"$92,575"},{"first_name":"Jennifer","last_name":"Chang","position":"Regional Director","office":"Singapore","start_date":"14th Nov 10","salary":"$357,650"},{"first_name":"Brenden","last_name":"Wagner","position":"Software Engineer","office":"San Francisco","start_date":"7th Jun 11","salary":"$206,850"},{"first_name":"Fiona","last_name":"Green","position":"Chief Operating Officer (COO)","office":"San Francisco","start_date":"11th Mar 10","salary":"$850,000"},{"first_name":"Shou","last_name":"Itou","position":"Regional Marketing","office":"Tokyo","start_date":"14th Aug 11","salary":"$163,000"},{"first_name":"Michelle","last_name":"House","position":"Integration Specialist","office":"Sidney","start_date":"2nd Jun 11","salary":"$95,400"},{"first_name":"Suki","last_name":"Burks","position":"Developer","office":"London","start_date":"22nd Oct 09","salary":"$114,500"},{"first_name":"Prescott","last_name":"Bartlett","position":"Technical Author","office":"London","start_date":"7th May 11","salary":"$145,000"},{"first_name":"Gavin","last_name":"Cortez","position":"Team Leader","office":"San Francisco","start_date":"26th Oct 08","salary":"$235,500"},{"first_name":"Martena","last_name":"Mccray","position":"Post-Sales support","office":"Edinburgh","start_date":"9th Mar 11","salary":"$324,050"},{"first_name":"Unity","last_name":"Butler","position":"Marketing Designer","office":"San Francisco","start_date":"9th Dec 09","salary":"$85,675"},{"first_name":"Howard","last_name":"Hatfield","position":"Office Manager","office":"San Francisco","start_date":"16th Dec 08","salary":"$164,500"},{"first_name":"Hope","last_name":"Fuentes","position":"Secretary","office":"San Francisco","start_date":"12th Feb 10","salary":"$109,850"},{"first_name":"Vivian","last_name":"Harrell","position":"Financial Controller","office":"San Francisco","start_date":"14th Feb 09","salary":"$452,500"},{"first_name":"Timothy","last_name":"Mooney","position":"Office Manager","office":"London","start_date":"11th Dec 08","salary":"$136,200"},{"first_name":"Jackson","last_name":"Bradshaw","position":"Director","office":"New York","start_date":"26th Sep 08","salary":"$645,750"},{"first_name":"Olivia","last_name":"Liang","position":"Support Engineer","office":"Singapore","start_date":"3rd Feb 11","salary":"$234,500"},{"first_name":"Bruno","last_name":"Nash","position":"Software Engineer","office":"London","start_date":"3rd May 11","salary":"$163,500"},{"first_name":"Sakura","last_name":"Yamamoto","position":"Support Engineer","office":"Tokyo","start_date":"19th Aug 09","salary":"$139,575"},{"first_name":"Thor","last_name":"Walton","position":"Developer","office":"New York","start_date":"11th Aug 13","salary":"$98,540"},{"first_name":"Finn","last_name":"Camacho","position":"Support Engineer","office":"San Francisco","start_date":"7th Jul 09","salary":"$87,500"},{"first_name":"Serge","last_name":"Baldwin","position":"Data Coordinator","office":"Singapore","start_date":"9th Apr 12","salary":"$138,575"},{"first_name":"Zenaida","last_name":"Frank","position":"Software Engineer","office":"New York","start_date":"4th Jan 10","salary":"$125,250"},{"first_name":"Zorita","last_name":"Serrano","position":"Software Engineer","office":"San Francisco","start_date":"1st Jun 12","salary":"$115,000"},{"first_name":"Jennifer","last_name":"Acosta","position":"Junior Javascript Developer","office":"Edinburgh","start_date":"1st Feb 13","salary":"$75,650"},{"first_name":"Cara","last_name":"Stevens","position":"Sales Assistant","office":"New York","start_date":"6th Dec 11","salary":"$145,600"},{"first_name":"Hermione","last_name":"Butler","position":"Regional Director","office":"London","start_date":"21st Mar 11","salary":"$356,250"},{"first_name":"Lael","last_name":"Greer","position":"Systems Administrator","office":"London","start_date":"27th Feb 09","salary":"$103,500"},{"first_name":"Jonas","last_name":"Alexander","position":"Developer","office":"San Francisco","start_date":"14th Jul 10","salary":"$86,500"},{"first_name":"Shad","last_name":"Decker","position":"Regional Director","office":"Edinburgh","start_date":"13th Nov 08","salary":"$183,000"},{"first_name":"Michael","last_name":"Bruce","position":"Javascript Developer","office":"Singapore","start_date":"27th Jun 11","salary":"$183,000"},{"first_name":"Donna","last_name":"Snider","position":"Customer Support","office":"New York","start_date":"25th Jan 11","salary":"$112,000"}]}
-info: Oct-17-2022 11:04:00: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:04:00: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:04:15: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:04:15: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:05:15: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:05:15: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:05:41: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:05:41: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:05:43: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:05:43: 	Server gotss : !{"draw":0,"recordsTotal":57,"recordsFiltered":57,"data":[{"first_name":"Tiger","last_name":"Nixon","position":"System Architect","office":"Edinburgh","start_date":"25th Apr 11","salary":"$320,800"},{"first_name":"Garrett","last_name":"Winters","position":"Accountant","office":"Tokyo","start_date":"25th Jul 11","salary":"$170,750"},{"first_name":"Ashton","last_name":"Cox","position":"Junior Technical Author","office":"San Francisco","start_date":"12th Jan 09","salary":"$86,000"},{"first_name":"Cedric","last_name":"Kelly","position":"Senior Javascript Developer","office":"Edinburgh","start_date":"29th Mar 12","salary":"$433,060"},{"first_name":"Airi","last_name":"Satou","position":"Accountant","office":"Tokyo","start_date":"28th Nov 08","salary":"$162,700"},{"first_name":"Brielle","last_name":"Williamson","position":"Integration Specialist","office":"New York","start_date":"2nd Dec 12","salary":"$372,000"},{"first_name":"Herrod","last_name":"Chandler","position":"Sales Assistant","office":"San Francisco","start_date":"6th Aug 12","salary":"$137,500"},{"first_name":"Rhona","last_name":"Davidson","position":"Integration Specialist","office":"Tokyo","start_date":"14th Oct 10","salary":"$327,900"},{"first_name":"Colleen","last_name":"Hurst","position":"Javascript Developer","office":"San Francisco","start_date":"15th Sep 09","salary":"$205,500"},{"first_name":"Sonya","last_name":"Frost","position":"Software Engineer","office":"Edinburgh","start_date":"13th Dec 08","salary":"$103,600"},{"first_name":"Jena","last_name":"Gaines","position":"Office Manager","office":"London","start_date":"19th Dec 08","salary":"$90,560"},{"first_name":"Quinn","last_name":"Flynn","position":"Support Lead","office":"Edinburgh","start_date":"3rd Mar 13","salary":"$342,000"},{"first_name":"Charde","last_name":"Marshall","position":"Regional Director","office":"San Francisco","start_date":"16th Oct 08","salary":"$470,600"},{"first_name":"Haley","last_name":"Kennedy","position":"Senior Marketing Designer","office":"London","start_date":"18th Dec 12","salary":"$313,500"},{"first_name":"Tatyana","last_name":"Fitzpatrick","position":"Regional Director","office":"London","start_date":"17th Mar 10","salary":"$385,750"},{"first_name":"Michael","last_name":"Silva","position":"Marketing Designer","office":"London","start_date":"27th Nov 12","salary":"$198,500"},{"first_name":"Paul","last_name":"Byrd","position":"Chief Financial Officer (CFO)","office":"New York","start_date":"9th Jun 10","salary":"$725,000"},{"first_name":"Gloria","last_name":"Little","position":"Systems Administrator","office":"New York","start_date":"10th Apr 09","salary":"$237,500"},{"first_name":"Bradley","last_name":"Greer","position":"Software Engineer","office":"London","start_date":"13th Oct 12","salary":"$132,000"},{"first_name":"Dai","last_name":"Rios","position":"Personnel Lead","office":"Edinburgh","start_date":"26th Sep 12","salary":"$217,500"},{"first_name":"Jenette","last_name":"Caldwell","position":"Development Lead","office":"New York","start_date":"3rd Sep 11","salary":"$345,000"},{"first_name":"Yuri","last_name":"Berry","position":"Chief Marketing Officer (CMO)","office":"New York","start_date":"25th Jun 09","salary":"$675,000"},{"first_name":"Caesar","last_name":"Vance","position":"Pre-Sales Support","office":"New York","start_date":"12th Dec 11","salary":"$106,450"},{"first_name":"Doris","last_name":"Wilder","position":"Sales Assistant","office":"Sidney","start_date":"20th Sep 10","salary":"$85,600"},{"first_name":"Angelica","last_name":"Ramos","position":"Chief Executive Officer (CEO)","office":"London","start_date":"9th Oct 09","salary":"$1,200,000"},{"first_name":"Gavin","last_name":"Joyce","position":"Developer","office":"Edinburgh","start_date":"22nd Dec 10","salary":"$92,575"},{"first_name":"Jennifer","last_name":"Chang","position":"Regional Director","office":"Singapore","start_date":"14th Nov 10","salary":"$357,650"},{"first_name":"Brenden","last_name":"Wagner","position":"Software Engineer","office":"San Francisco","start_date":"7th Jun 11","salary":"$206,850"},{"first_name":"Fiona","last_name":"Green","position":"Chief Operating Officer (COO)","office":"San Francisco","start_date":"11th Mar 10","salary":"$850,000"},{"first_name":"Shou","last_name":"Itou","position":"Regional Marketing","office":"Tokyo","start_date":"14th Aug 11","salary":"$163,000"},{"first_name":"Michelle","last_name":"House","position":"Integration Specialist","office":"Sidney","start_date":"2nd Jun 11","salary":"$95,400"},{"first_name":"Suki","last_name":"Burks","position":"Developer","office":"London","start_date":"22nd Oct 09","salary":"$114,500"},{"first_name":"Prescott","last_name":"Bartlett","position":"Technical Author","office":"London","start_date":"7th May 11","salary":"$145,000"},{"first_name":"Gavin","last_name":"Cortez","position":"Team Leader","office":"San Francisco","start_date":"26th Oct 08","salary":"$235,500"},{"first_name":"Martena","last_name":"Mccray","position":"Post-Sales support","office":"Edinburgh","start_date":"9th Mar 11","salary":"$324,050"},{"first_name":"Unity","last_name":"Butler","position":"Marketing Designer","office":"San Francisco","start_date":"9th Dec 09","salary":"$85,675"},{"first_name":"Howard","last_name":"Hatfield","position":"Office Manager","office":"San Francisco","start_date":"16th Dec 08","salary":"$164,500"},{"first_name":"Hope","last_name":"Fuentes","position":"Secretary","office":"San Francisco","start_date":"12th Feb 10","salary":"$109,850"},{"first_name":"Vivian","last_name":"Harrell","position":"Financial Controller","office":"San Francisco","start_date":"14th Feb 09","salary":"$452,500"},{"first_name":"Timothy","last_name":"Mooney","position":"Office Manager","office":"London","start_date":"11th Dec 08","salary":"$136,200"},{"first_name":"Jackson","last_name":"Bradshaw","position":"Director","office":"New York","start_date":"26th Sep 08","salary":"$645,750"},{"first_name":"Olivia","last_name":"Liang","position":"Support Engineer","office":"Singapore","start_date":"3rd Feb 11","salary":"$234,500"},{"first_name":"Bruno","last_name":"Nash","position":"Software Engineer","office":"London","start_date":"3rd May 11","salary":"$163,500"},{"first_name":"Sakura","last_name":"Yamamoto","position":"Support Engineer","office":"Tokyo","start_date":"19th Aug 09","salary":"$139,575"},{"first_name":"Thor","last_name":"Walton","position":"Developer","office":"New York","start_date":"11th Aug 13","salary":"$98,540"},{"first_name":"Finn","last_name":"Camacho","position":"Support Engineer","office":"San Francisco","start_date":"7th Jul 09","salary":"$87,500"},{"first_name":"Serge","last_name":"Baldwin","position":"Data Coordinator","office":"Singapore","start_date":"9th Apr 12","salary":"$138,575"},{"first_name":"Zenaida","last_name":"Frank","position":"Software Engineer","office":"New York","start_date":"4th Jan 10","salary":"$125,250"},{"first_name":"Zorita","last_name":"Serrano","position":"Software Engineer","office":"San Francisco","start_date":"1st Jun 12","salary":"$115,000"},{"first_name":"Jennifer","last_name":"Acosta","position":"Junior Javascript Developer","office":"Edinburgh","start_date":"1st Feb 13","salary":"$75,650"},{"first_name":"Cara","last_name":"Stevens","position":"Sales Assistant","office":"New York","start_date":"6th Dec 11","salary":"$145,600"},{"first_name":"Hermione","last_name":"Butler","position":"Regional Director","office":"London","start_date":"21st Mar 11","salary":"$356,250"},{"first_name":"Lael","last_name":"Greer","position":"Systems Administrator","office":"London","start_date":"27th Feb 09","salary":"$103,500"},{"first_name":"Jonas","last_name":"Alexander","position":"Developer","office":"San Francisco","start_date":"14th Jul 10","salary":"$86,500"},{"first_name":"Shad","last_name":"Decker","position":"Regional Director","office":"Edinburgh","start_date":"13th Nov 08","salary":"$183,000"},{"first_name":"Michael","last_name":"Bruce","position":"Javascript Developer","office":"Singapore","start_date":"27th Jun 11","salary":"$183,000"},{"first_name":"Donna","last_name":"Snider","position":"Customer Support","office":"New York","start_date":"25th Jan 11","salary":"$112,000"}]}
-info: Oct-17-2022 11:05:47: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:05:47: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:05:47: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:05:47: 	Server gotss : !{"draw":0,"recordsTotal":57,"recordsFiltered":57,"data":[{"first_name":"Tiger","last_name":"Nixon","position":"System Architect","office":"Edinburgh","start_date":"25th Apr 11","salary":"$320,800"},{"first_name":"Garrett","last_name":"Winters","position":"Accountant","office":"Tokyo","start_date":"25th Jul 11","salary":"$170,750"},{"first_name":"Ashton","last_name":"Cox","position":"Junior Technical Author","office":"San Francisco","start_date":"12th Jan 09","salary":"$86,000"},{"first_name":"Cedric","last_name":"Kelly","position":"Senior Javascript Developer","office":"Edinburgh","start_date":"29th Mar 12","salary":"$433,060"},{"first_name":"Airi","last_name":"Satou","position":"Accountant","office":"Tokyo","start_date":"28th Nov 08","salary":"$162,700"},{"first_name":"Brielle","last_name":"Williamson","position":"Integration Specialist","office":"New York","start_date":"2nd Dec 12","salary":"$372,000"},{"first_name":"Herrod","last_name":"Chandler","position":"Sales Assistant","office":"San Francisco","start_date":"6th Aug 12","salary":"$137,500"},{"first_name":"Rhona","last_name":"Davidson","position":"Integration Specialist","office":"Tokyo","start_date":"14th Oct 10","salary":"$327,900"},{"first_name":"Colleen","last_name":"Hurst","position":"Javascript Developer","office":"San Francisco","start_date":"15th Sep 09","salary":"$205,500"},{"first_name":"Sonya","last_name":"Frost","position":"Software Engineer","office":"Edinburgh","start_date":"13th Dec 08","salary":"$103,600"},{"first_name":"Jena","last_name":"Gaines","position":"Office Manager","office":"London","start_date":"19th Dec 08","salary":"$90,560"},{"first_name":"Quinn","last_name":"Flynn","position":"Support Lead","office":"Edinburgh","start_date":"3rd Mar 13","salary":"$342,000"},{"first_name":"Charde","last_name":"Marshall","position":"Regional Director","office":"San Francisco","start_date":"16th Oct 08","salary":"$470,600"},{"first_name":"Haley","last_name":"Kennedy","position":"Senior Marketing Designer","office":"London","start_date":"18th Dec 12","salary":"$313,500"},{"first_name":"Tatyana","last_name":"Fitzpatrick","position":"Regional Director","office":"London","start_date":"17th Mar 10","salary":"$385,750"},{"first_name":"Michael","last_name":"Silva","position":"Marketing Designer","office":"London","start_date":"27th Nov 12","salary":"$198,500"},{"first_name":"Paul","last_name":"Byrd","position":"Chief Financial Officer (CFO)","office":"New York","start_date":"9th Jun 10","salary":"$725,000"},{"first_name":"Gloria","last_name":"Little","position":"Systems Administrator","office":"New York","start_date":"10th Apr 09","salary":"$237,500"},{"first_name":"Bradley","last_name":"Greer","position":"Software Engineer","office":"London","start_date":"13th Oct 12","salary":"$132,000"},{"first_name":"Dai","last_name":"Rios","position":"Personnel Lead","office":"Edinburgh","start_date":"26th Sep 12","salary":"$217,500"},{"first_name":"Jenette","last_name":"Caldwell","position":"Development Lead","office":"New York","start_date":"3rd Sep 11","salary":"$345,000"},{"first_name":"Yuri","last_name":"Berry","position":"Chief Marketing Officer (CMO)","office":"New York","start_date":"25th Jun 09","salary":"$675,000"},{"first_name":"Caesar","last_name":"Vance","position":"Pre-Sales Support","office":"New York","start_date":"12th Dec 11","salary":"$106,450"},{"first_name":"Doris","last_name":"Wilder","position":"Sales Assistant","office":"Sidney","start_date":"20th Sep 10","salary":"$85,600"},{"first_name":"Angelica","last_name":"Ramos","position":"Chief Executive Officer (CEO)","office":"London","start_date":"9th Oct 09","salary":"$1,200,000"},{"first_name":"Gavin","last_name":"Joyce","position":"Developer","office":"Edinburgh","start_date":"22nd Dec 10","salary":"$92,575"},{"first_name":"Jennifer","last_name":"Chang","position":"Regional Director","office":"Singapore","start_date":"14th Nov 10","salary":"$357,650"},{"first_name":"Brenden","last_name":"Wagner","position":"Software Engineer","office":"San Francisco","start_date":"7th Jun 11","salary":"$206,850"},{"first_name":"Fiona","last_name":"Green","position":"Chief Operating Officer (COO)","office":"San Francisco","start_date":"11th Mar 10","salary":"$850,000"},{"first_name":"Shou","last_name":"Itou","position":"Regional Marketing","office":"Tokyo","start_date":"14th Aug 11","salary":"$163,000"},{"first_name":"Michelle","last_name":"House","position":"Integration Specialist","office":"Sidney","start_date":"2nd Jun 11","salary":"$95,400"},{"first_name":"Suki","last_name":"Burks","position":"Developer","office":"London","start_date":"22nd Oct 09","salary":"$114,500"},{"first_name":"Prescott","last_name":"Bartlett","position":"Technical Author","office":"London","start_date":"7th May 11","salary":"$145,000"},{"first_name":"Gavin","last_name":"Cortez","position":"Team Leader","office":"San Francisco","start_date":"26th Oct 08","salary":"$235,500"},{"first_name":"Martena","last_name":"Mccray","position":"Post-Sales support","office":"Edinburgh","start_date":"9th Mar 11","salary":"$324,050"},{"first_name":"Unity","last_name":"Butler","position":"Marketing Designer","office":"San Francisco","start_date":"9th Dec 09","salary":"$85,675"},{"first_name":"Howard","last_name":"Hatfield","position":"Office Manager","office":"San Francisco","start_date":"16th Dec 08","salary":"$164,500"},{"first_name":"Hope","last_name":"Fuentes","position":"Secretary","office":"San Francisco","start_date":"12th Feb 10","salary":"$109,850"},{"first_name":"Vivian","last_name":"Harrell","position":"Financial Controller","office":"San Francisco","start_date":"14th Feb 09","salary":"$452,500"},{"first_name":"Timothy","last_name":"Mooney","position":"Office Manager","office":"London","start_date":"11th Dec 08","salary":"$136,200"},{"first_name":"Jackson","last_name":"Bradshaw","position":"Director","office":"New York","start_date":"26th Sep 08","salary":"$645,750"},{"first_name":"Olivia","last_name":"Liang","position":"Support Engineer","office":"Singapore","start_date":"3rd Feb 11","salary":"$234,500"},{"first_name":"Bruno","last_name":"Nash","position":"Software Engineer","office":"London","start_date":"3rd May 11","salary":"$163,500"},{"first_name":"Sakura","last_name":"Yamamoto","position":"Support Engineer","office":"Tokyo","start_date":"19th Aug 09","salary":"$139,575"},{"first_name":"Thor","last_name":"Walton","position":"Developer","office":"New York","start_date":"11th Aug 13","salary":"$98,540"},{"first_name":"Finn","last_name":"Camacho","position":"Support Engineer","office":"San Francisco","start_date":"7th Jul 09","salary":"$87,500"},{"first_name":"Serge","last_name":"Baldwin","position":"Data Coordinator","office":"Singapore","start_date":"9th Apr 12","salary":"$138,575"},{"first_name":"Zenaida","last_name":"Frank","position":"Software Engineer","office":"New York","start_date":"4th Jan 10","salary":"$125,250"},{"first_name":"Zorita","last_name":"Serrano","position":"Software Engineer","office":"San Francisco","start_date":"1st Jun 12","salary":"$115,000"},{"first_name":"Jennifer","last_name":"Acosta","position":"Junior Javascript Developer","office":"Edinburgh","start_date":"1st Feb 13","salary":"$75,650"},{"first_name":"Cara","last_name":"Stevens","position":"Sales Assistant","office":"New York","start_date":"6th Dec 11","salary":"$145,600"},{"first_name":"Hermione","last_name":"Butler","position":"Regional Director","office":"London","start_date":"21st Mar 11","salary":"$356,250"},{"first_name":"Lael","last_name":"Greer","position":"Systems Administrator","office":"London","start_date":"27th Feb 09","salary":"$103,500"},{"first_name":"Jonas","last_name":"Alexander","position":"Developer","office":"San Francisco","start_date":"14th Jul 10","salary":"$86,500"},{"first_name":"Shad","last_name":"Decker","position":"Regional Director","office":"Edinburgh","start_date":"13th Nov 08","salary":"$183,000"},{"first_name":"Michael","last_name":"Bruce","position":"Javascript Developer","office":"Singapore","start_date":"27th Jun 11","salary":"$183,000"},{"first_name":"Donna","last_name":"Snider","position":"Customer Support","office":"New York","start_date":"25th Jan 11","salary":"$112,000"}]}
-info: Oct-17-2022 11:05:56: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:05:56: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:05:56: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:05:56: 	Server gotss : !{"draw":0,"recordsTotal":57,"recordsFiltered":57,"data":[{"first_name":"Tiger","last_name":"Nixon","position":"System Architect","office":"Edinburgh","start_date":"25th Apr 11","salary":"$320,800"},{"first_name":"Garrett","last_name":"Winters","position":"Accountant","office":"Tokyo","start_date":"25th Jul 11","salary":"$170,750"},{"first_name":"Ashton","last_name":"Cox","position":"Junior Technical Author","office":"San Francisco","start_date":"12th Jan 09","salary":"$86,000"},{"first_name":"Cedric","last_name":"Kelly","position":"Senior Javascript Developer","office":"Edinburgh","start_date":"29th Mar 12","salary":"$433,060"},{"first_name":"Airi","last_name":"Satou","position":"Accountant","office":"Tokyo","start_date":"28th Nov 08","salary":"$162,700"},{"first_name":"Brielle","last_name":"Williamson","position":"Integration Specialist","office":"New York","start_date":"2nd Dec 12","salary":"$372,000"},{"first_name":"Herrod","last_name":"Chandler","position":"Sales Assistant","office":"San Francisco","start_date":"6th Aug 12","salary":"$137,500"},{"first_name":"Rhona","last_name":"Davidson","position":"Integration Specialist","office":"Tokyo","start_date":"14th Oct 10","salary":"$327,900"},{"first_name":"Colleen","last_name":"Hurst","position":"Javascript Developer","office":"San Francisco","start_date":"15th Sep 09","salary":"$205,500"},{"first_name":"Sonya","last_name":"Frost","position":"Software Engineer","office":"Edinburgh","start_date":"13th Dec 08","salary":"$103,600"},{"first_name":"Jena","last_name":"Gaines","position":"Office Manager","office":"London","start_date":"19th Dec 08","salary":"$90,560"},{"first_name":"Quinn","last_name":"Flynn","position":"Support Lead","office":"Edinburgh","start_date":"3rd Mar 13","salary":"$342,000"},{"first_name":"Charde","last_name":"Marshall","position":"Regional Director","office":"San Francisco","start_date":"16th Oct 08","salary":"$470,600"},{"first_name":"Haley","last_name":"Kennedy","position":"Senior Marketing Designer","office":"London","start_date":"18th Dec 12","salary":"$313,500"},{"first_name":"Tatyana","last_name":"Fitzpatrick","position":"Regional Director","office":"London","start_date":"17th Mar 10","salary":"$385,750"},{"first_name":"Michael","last_name":"Silva","position":"Marketing Designer","office":"London","start_date":"27th Nov 12","salary":"$198,500"},{"first_name":"Paul","last_name":"Byrd","position":"Chief Financial Officer (CFO)","office":"New York","start_date":"9th Jun 10","salary":"$725,000"},{"first_name":"Gloria","last_name":"Little","position":"Systems Administrator","office":"New York","start_date":"10th Apr 09","salary":"$237,500"},{"first_name":"Bradley","last_name":"Greer","position":"Software Engineer","office":"London","start_date":"13th Oct 12","salary":"$132,000"},{"first_name":"Dai","last_name":"Rios","position":"Personnel Lead","office":"Edinburgh","start_date":"26th Sep 12","salary":"$217,500"},{"first_name":"Jenette","last_name":"Caldwell","position":"Development Lead","office":"New York","start_date":"3rd Sep 11","salary":"$345,000"},{"first_name":"Yuri","last_name":"Berry","position":"Chief Marketing Officer (CMO)","office":"New York","start_date":"25th Jun 09","salary":"$675,000"},{"first_name":"Caesar","last_name":"Vance","position":"Pre-Sales Support","office":"New York","start_date":"12th Dec 11","salary":"$106,450"},{"first_name":"Doris","last_name":"Wilder","position":"Sales Assistant","office":"Sidney","start_date":"20th Sep 10","salary":"$85,600"},{"first_name":"Angelica","last_name":"Ramos","position":"Chief Executive Officer (CEO)","office":"London","start_date":"9th Oct 09","salary":"$1,200,000"},{"first_name":"Gavin","last_name":"Joyce","position":"Developer","office":"Edinburgh","start_date":"22nd Dec 10","salary":"$92,575"},{"first_name":"Jennifer","last_name":"Chang","position":"Regional Director","office":"Singapore","start_date":"14th Nov 10","salary":"$357,650"},{"first_name":"Brenden","last_name":"Wagner","position":"Software Engineer","office":"San Francisco","start_date":"7th Jun 11","salary":"$206,850"},{"first_name":"Fiona","last_name":"Green","position":"Chief Operating Officer (COO)","office":"San Francisco","start_date":"11th Mar 10","salary":"$850,000"},{"first_name":"Shou","last_name":"Itou","position":"Regional Marketing","office":"Tokyo","start_date":"14th Aug 11","salary":"$163,000"},{"first_name":"Michelle","last_name":"House","position":"Integration Specialist","office":"Sidney","start_date":"2nd Jun 11","salary":"$95,400"},{"first_name":"Suki","last_name":"Burks","position":"Developer","office":"London","start_date":"22nd Oct 09","salary":"$114,500"},{"first_name":"Prescott","last_name":"Bartlett","position":"Technical Author","office":"London","start_date":"7th May 11","salary":"$145,000"},{"first_name":"Gavin","last_name":"Cortez","position":"Team Leader","office":"San Francisco","start_date":"26th Oct 08","salary":"$235,500"},{"first_name":"Martena","last_name":"Mccray","position":"Post-Sales support","office":"Edinburgh","start_date":"9th Mar 11","salary":"$324,050"},{"first_name":"Unity","last_name":"Butler","position":"Marketing Designer","office":"San Francisco","start_date":"9th Dec 09","salary":"$85,675"},{"first_name":"Howard","last_name":"Hatfield","position":"Office Manager","office":"San Francisco","start_date":"16th Dec 08","salary":"$164,500"},{"first_name":"Hope","last_name":"Fuentes","position":"Secretary","office":"San Francisco","start_date":"12th Feb 10","salary":"$109,850"},{"first_name":"Vivian","last_name":"Harrell","position":"Financial Controller","office":"San Francisco","start_date":"14th Feb 09","salary":"$452,500"},{"first_name":"Timothy","last_name":"Mooney","position":"Office Manager","office":"London","start_date":"11th Dec 08","salary":"$136,200"},{"first_name":"Jackson","last_name":"Bradshaw","position":"Director","office":"New York","start_date":"26th Sep 08","salary":"$645,750"},{"first_name":"Olivia","last_name":"Liang","position":"Support Engineer","office":"Singapore","start_date":"3rd Feb 11","salary":"$234,500"},{"first_name":"Bruno","last_name":"Nash","position":"Software Engineer","office":"London","start_date":"3rd May 11","salary":"$163,500"},{"first_name":"Sakura","last_name":"Yamamoto","position":"Support Engineer","office":"Tokyo","start_date":"19th Aug 09","salary":"$139,575"},{"first_name":"Thor","last_name":"Walton","position":"Developer","office":"New York","start_date":"11th Aug 13","salary":"$98,540"},{"first_name":"Finn","last_name":"Camacho","position":"Support Engineer","office":"San Francisco","start_date":"7th Jul 09","salary":"$87,500"},{"first_name":"Serge","last_name":"Baldwin","position":"Data Coordinator","office":"Singapore","start_date":"9th Apr 12","salary":"$138,575"},{"first_name":"Zenaida","last_name":"Frank","position":"Software Engineer","office":"New York","start_date":"4th Jan 10","salary":"$125,250"},{"first_name":"Zorita","last_name":"Serrano","position":"Software Engineer","office":"San Francisco","start_date":"1st Jun 12","salary":"$115,000"},{"first_name":"Jennifer","last_name":"Acosta","position":"Junior Javascript Developer","office":"Edinburgh","start_date":"1st Feb 13","salary":"$75,650"},{"first_name":"Cara","last_name":"Stevens","position":"Sales Assistant","office":"New York","start_date":"6th Dec 11","salary":"$145,600"},{"first_name":"Hermione","last_name":"Butler","position":"Regional Director","office":"London","start_date":"21st Mar 11","salary":"$356,250"},{"first_name":"Lael","last_name":"Greer","position":"Systems Administrator","office":"London","start_date":"27th Feb 09","salary":"$103,500"},{"first_name":"Jonas","last_name":"Alexander","position":"Developer","office":"San Francisco","start_date":"14th Jul 10","salary":"$86,500"},{"first_name":"Shad","last_name":"Decker","position":"Regional Director","office":"Edinburgh","start_date":"13th Nov 08","salary":"$183,000"},{"first_name":"Michael","last_name":"Bruce","position":"Javascript Developer","office":"Singapore","start_date":"27th Jun 11","salary":"$183,000"},{"first_name":"Donna","last_name":"Snider","position":"Customer Support","office":"New York","start_date":"25th Jan 11","salary":"$112,000"}]}
-info: Oct-17-2022 11:06:49: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:06:49: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:06:49: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:06:49: 	Server gotss : !{"draw":0,"recordsTotal":57,"recordsFiltered":57,"data":[{"first_name":"Tiger","last_name":"Nixon","position":"System Architect","office":"Edinburgh","start_date":"25th Apr 11","salary":"$320,800"},{"first_name":"Garrett","last_name":"Winters","position":"Accountant","office":"Tokyo","start_date":"25th Jul 11","salary":"$170,750"},{"first_name":"Ashton","last_name":"Cox","position":"Junior Technical Author","office":"San Francisco","start_date":"12th Jan 09","salary":"$86,000"},{"first_name":"Cedric","last_name":"Kelly","position":"Senior Javascript Developer","office":"Edinburgh","start_date":"29th Mar 12","salary":"$433,060"},{"first_name":"Airi","last_name":"Satou","position":"Accountant","office":"Tokyo","start_date":"28th Nov 08","salary":"$162,700"},{"first_name":"Brielle","last_name":"Williamson","position":"Integration Specialist","office":"New York","start_date":"2nd Dec 12","salary":"$372,000"},{"first_name":"Herrod","last_name":"Chandler","position":"Sales Assistant","office":"San Francisco","start_date":"6th Aug 12","salary":"$137,500"},{"first_name":"Rhona","last_name":"Davidson","position":"Integration Specialist","office":"Tokyo","start_date":"14th Oct 10","salary":"$327,900"},{"first_name":"Colleen","last_name":"Hurst","position":"Javascript Developer","office":"San Francisco","start_date":"15th Sep 09","salary":"$205,500"},{"first_name":"Sonya","last_name":"Frost","position":"Software Engineer","office":"Edinburgh","start_date":"13th Dec 08","salary":"$103,600"},{"first_name":"Jena","last_name":"Gaines","position":"Office Manager","office":"London","start_date":"19th Dec 08","salary":"$90,560"},{"first_name":"Quinn","last_name":"Flynn","position":"Support Lead","office":"Edinburgh","start_date":"3rd Mar 13","salary":"$342,000"},{"first_name":"Charde","last_name":"Marshall","position":"Regional Director","office":"San Francisco","start_date":"16th Oct 08","salary":"$470,600"},{"first_name":"Haley","last_name":"Kennedy","position":"Senior Marketing Designer","office":"London","start_date":"18th Dec 12","salary":"$313,500"},{"first_name":"Tatyana","last_name":"Fitzpatrick","position":"Regional Director","office":"London","start_date":"17th Mar 10","salary":"$385,750"},{"first_name":"Michael","last_name":"Silva","position":"Marketing Designer","office":"London","start_date":"27th Nov 12","salary":"$198,500"},{"first_name":"Paul","last_name":"Byrd","position":"Chief Financial Officer (CFO)","office":"New York","start_date":"9th Jun 10","salary":"$725,000"},{"first_name":"Gloria","last_name":"Little","position":"Systems Administrator","office":"New York","start_date":"10th Apr 09","salary":"$237,500"},{"first_name":"Bradley","last_name":"Greer","position":"Software Engineer","office":"London","start_date":"13th Oct 12","salary":"$132,000"},{"first_name":"Dai","last_name":"Rios","position":"Personnel Lead","office":"Edinburgh","start_date":"26th Sep 12","salary":"$217,500"},{"first_name":"Jenette","last_name":"Caldwell","position":"Development Lead","office":"New York","start_date":"3rd Sep 11","salary":"$345,000"},{"first_name":"Yuri","last_name":"Berry","position":"Chief Marketing Officer (CMO)","office":"New York","start_date":"25th Jun 09","salary":"$675,000"},{"first_name":"Caesar","last_name":"Vance","position":"Pre-Sales Support","office":"New York","start_date":"12th Dec 11","salary":"$106,450"},{"first_name":"Doris","last_name":"Wilder","position":"Sales Assistant","office":"Sidney","start_date":"20th Sep 10","salary":"$85,600"},{"first_name":"Angelica","last_name":"Ramos","position":"Chief Executive Officer (CEO)","office":"London","start_date":"9th Oct 09","salary":"$1,200,000"},{"first_name":"Gavin","last_name":"Joyce","position":"Developer","office":"Edinburgh","start_date":"22nd Dec 10","salary":"$92,575"},{"first_name":"Jennifer","last_name":"Chang","position":"Regional Director","office":"Singapore","start_date":"14th Nov 10","salary":"$357,650"},{"first_name":"Brenden","last_name":"Wagner","position":"Software Engineer","office":"San Francisco","start_date":"7th Jun 11","salary":"$206,850"},{"first_name":"Fiona","last_name":"Green","position":"Chief Operating Officer (COO)","office":"San Francisco","start_date":"11th Mar 10","salary":"$850,000"},{"first_name":"Shou","last_name":"Itou","position":"Regional Marketing","office":"Tokyo","start_date":"14th Aug 11","salary":"$163,000"},{"first_name":"Michelle","last_name":"House","position":"Integration Specialist","office":"Sidney","start_date":"2nd Jun 11","salary":"$95,400"},{"first_name":"Suki","last_name":"Burks","position":"Developer","office":"London","start_date":"22nd Oct 09","salary":"$114,500"},{"first_name":"Prescott","last_name":"Bartlett","position":"Technical Author","office":"London","start_date":"7th May 11","salary":"$145,000"},{"first_name":"Gavin","last_name":"Cortez","position":"Team Leader","office":"San Francisco","start_date":"26th Oct 08","salary":"$235,500"},{"first_name":"Martena","last_name":"Mccray","position":"Post-Sales support","office":"Edinburgh","start_date":"9th Mar 11","salary":"$324,050"},{"first_name":"Unity","last_name":"Butler","position":"Marketing Designer","office":"San Francisco","start_date":"9th Dec 09","salary":"$85,675"},{"first_name":"Howard","last_name":"Hatfield","position":"Office Manager","office":"San Francisco","start_date":"16th Dec 08","salary":"$164,500"},{"first_name":"Hope","last_name":"Fuentes","position":"Secretary","office":"San Francisco","start_date":"12th Feb 10","salary":"$109,850"},{"first_name":"Vivian","last_name":"Harrell","position":"Financial Controller","office":"San Francisco","start_date":"14th Feb 09","salary":"$452,500"},{"first_name":"Timothy","last_name":"Mooney","position":"Office Manager","office":"London","start_date":"11th Dec 08","salary":"$136,200"},{"first_name":"Jackson","last_name":"Bradshaw","position":"Director","office":"New York","start_date":"26th Sep 08","salary":"$645,750"},{"first_name":"Olivia","last_name":"Liang","position":"Support Engineer","office":"Singapore","start_date":"3rd Feb 11","salary":"$234,500"},{"first_name":"Bruno","last_name":"Nash","position":"Software Engineer","office":"London","start_date":"3rd May 11","salary":"$163,500"},{"first_name":"Sakura","last_name":"Yamamoto","position":"Support Engineer","office":"Tokyo","start_date":"19th Aug 09","salary":"$139,575"},{"first_name":"Thor","last_name":"Walton","position":"Developer","office":"New York","start_date":"11th Aug 13","salary":"$98,540"},{"first_name":"Finn","last_name":"Camacho","position":"Support Engineer","office":"San Francisco","start_date":"7th Jul 09","salary":"$87,500"},{"first_name":"Serge","last_name":"Baldwin","position":"Data Coordinator","office":"Singapore","start_date":"9th Apr 12","salary":"$138,575"},{"first_name":"Zenaida","last_name":"Frank","position":"Software Engineer","office":"New York","start_date":"4th Jan 10","salary":"$125,250"},{"first_name":"Zorita","last_name":"Serrano","position":"Software Engineer","office":"San Francisco","start_date":"1st Jun 12","salary":"$115,000"},{"first_name":"Jennifer","last_name":"Acosta","position":"Junior Javascript Developer","office":"Edinburgh","start_date":"1st Feb 13","salary":"$75,650"},{"first_name":"Cara","last_name":"Stevens","position":"Sales Assistant","office":"New York","start_date":"6th Dec 11","salary":"$145,600"},{"first_name":"Hermione","last_name":"Butler","position":"Regional Director","office":"London","start_date":"21st Mar 11","salary":"$356,250"},{"first_name":"Lael","last_name":"Greer","position":"Systems Administrator","office":"London","start_date":"27th Feb 09","salary":"$103,500"},{"first_name":"Jonas","last_name":"Alexander","position":"Developer","office":"San Francisco","start_date":"14th Jul 10","salary":"$86,500"},{"first_name":"Shad","last_name":"Decker","position":"Regional Director","office":"Edinburgh","start_date":"13th Nov 08","salary":"$183,000"},{"first_name":"Michael","last_name":"Bruce","position":"Javascript Developer","office":"Singapore","start_date":"27th Jun 11","salary":"$183,000"},{"first_name":"Donna","last_name":"Snider","position":"Customer Support","office":"New York","start_date":"25th Jan 11","salary":"$112,000"}]}
-info: Oct-17-2022 11:07:24: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:07:24: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:07:25: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:07:25: 	Server gotss : !{asd}
-info: Oct-17-2022 11:08:14: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:08:14: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:08:15: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:08:15: 	Server gotss : !{asdasdsd}
-info: Oct-17-2022 11:08:28: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:08:28: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:08:28: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:08:28: 	Server gotss : !{asdasdsd}
-info: Oct-17-2022 11:08:36: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:08:36: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:08:59: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:08:59: 	Server gotss : !{asdasdsd}
-info: Oct-17-2022 11:09:22: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:09:22: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:10:36: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:10:36: 	Server gotss : !{asdasdsd}
-info: Oct-17-2022 11:10:39: 	Server got : /!
-info: Oct-17-2022 11:10:57: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:10:57: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:10:57: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:10:57: 	Server gotss : !{asdasdsd}
-info: Oct-17-2022 11:13:24: 	Server Started in port : 3000!
-info: Oct-17-2022 11:13:31: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:13:31: 	Server gotss : !<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <link
-      href="https://nightly.datatables.net/css/jquery.dataTables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-
-    <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
-    <script>
-      var columns = [];
-      function getDT() {
-        $.ajax({
-          url: "/apis/logs",
-          success: function (data) {
-            data = JSON.parse(data);
-            columnNames = Object.keys(data.data[0]);
-            for (var i in columnNames) {
-              columns.push({
-                data: columnNames[i],
-                title: capitalizeFirstLetter(columnNames[i])
-              });
-            }
-            $("#example").DataTable({
-              data: data.data,
-              columns: columns
-            });
-          }
-        });
-      }
-
-      function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      $(document).ready(function () {
-        getDT();
-      });
-    </script>
-  </body>
-</html>
-
-info: Oct-17-2022 11:13:31: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:14:54: 	Server Started in port : 3000!
-info: Oct-17-2022 11:15:11: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:15:46: 	Server Started in port : 3000!
-info: Oct-17-2022 11:15:48: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:16:00: 	Server Started in port : 3000!
-info: Oct-17-2022 11:16:04: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:16:53: 	Server Started in port : 3000!
-info: Oct-17-2022 11:16:56: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:17:06: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:18:44: 	Server Started in port : 3000!
-info: Oct-17-2022 11:18:46: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:18:50: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:18:59: 	Server gotd : /logviewer!
-info: Oct-17-2022 11:19:05: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:21:25: 	Server Started in port : 3000!
-info: Oct-17-2022 11:21:27: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:23:33: 	Server Started in port : 3000!
-info: Oct-17-2022 11:23:39: 	Server gotd : /apis/logs!
-info: Oct-17-2022 11:25:41: 	Server Started in port : 3000!
-info: Oct-17-2022 11:40:54: 	Server got : /!
-info: Oct-17-2022 11:40:54: 	Server got : /!
-info: Oct-17-2022 11:40:58: 	Server got : /!
-info: Oct-17-2022 11:49:09: 	Server Started in port : 3000!
-info: Oct-17-2022 11:51:41: 	Server got : /!
-info: Oct-17-2022 11:51:41: 	Server got : /!
-info: Oct-17-2022 11:52:03: 	Server got : /!
-info: Oct-17-2022 11:54:04: 	Server Started in port : 3000!
-info: Oct-17-2022 11:54:07: 	Server Started in port : 3000!
-info: Oct-17-2022 11:55:06: 	Server Started in port : 3000!
-info: Oct-17-2022 12:04:20: 	Server got : /!
-info: Oct-17-2022 12:04:21: 	Server got : /!
-info: Oct-17-2022 12:07:25: 	Server Started in port : 3000!
-info: Oct-17-2022 12:07:27: 	Server got : /!
+{"timstamp"  Oct-17-2022 15:03:40 + 	
+{"info": "123"} }
+{"timstamp"  Oct-17-2022 15:08:27 + 	
+{"info": "123"} }
+{"timstamp" : "Oct-17-2022 15:08:33", "level" : "info", "message": "message" 	Server Started in port : 3000!}
+{"timstamp" : "Oct-17-2022 15:08:50", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:08:52", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:08:52", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:09:08", "level" : "info", "message": "	
+{"info": "123"} "}
+{"timstamp" : "Oct-17-2022 15:09:29", "level" : "info", "message": "	
+{"info": "123"} "}
+{"timstamp" : "Oct-17-2022 15:10:31", "level" : "info", "message": "	
+{"info": "123"} "}
+{"timstamp" : "Oct-17-2022 15:10:34", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:10:36", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:10:36", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:14:28", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:14:50", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:14:51", "level" : "info", "message": "	{"info": "123"} "}
+{"timstamp" : "Oct-17-2022 15:15:06", "level" : "info", "message": "	{"info": "123"} "}
+{"timstamp" : "Oct-17-2022 15:15:35", "level" : "info", "message": "	{"info": "123"} "}
+{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}
+{"timstamp" : "Oct-17-2022 15:18:46", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:18:49", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:18:49", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:19:02", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:19:04", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:19:20", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:19:21", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:19:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:19:39", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:19:46", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:19:47", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:19:54", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:19:57", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:19:57", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:20:41", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:20:42", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:21:02", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:21:36", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:21:37", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:21:44", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:21:52", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:21:59", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:22:05", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:26:40", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:26:42", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:27:21", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:27:22", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:27:32", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:27:33", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:28:34", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:28:35", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:29:05", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:29:07", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:29:32", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:29:33", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:30:18", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:30:19", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:30:26", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:30:28", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:30:43", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:30:45", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:30:45", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:30:47", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:30:53", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:30:55", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:31:05", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:31:05", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:31:17", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:31:19", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:31:24", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:31:30", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:31:33", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:31:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:31:40", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:31:46", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:32:00", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:32:02", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:32:43", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:32:45", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:32:45", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:32:49", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:33:03", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:33:05", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:33:05", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 15:33:07", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:35:14", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:35:26", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:35:28", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:35:48", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:35:50", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:36:13", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:36:29", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:38:11", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:38:14", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:38:21", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:38:22", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:38:34", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:38:35", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:38:45", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:38:46", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:38:58", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:39:00", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:39:46", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:39:47", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:41:06", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:41:08", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:49:05", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:49:54", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:50:03", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:52:00", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:57:22", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 15:59:39", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:59:53", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:59:55", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 16:00:00", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	{"info": "123"} "}"}
+{"timstamp" : "Oct-17-2022 16:03:00", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	info": 123 "}"}
+{"timstamp" : "Oct-17-2022 16:03:16", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	info: 123 "}"}
+{"timstamp" : "Oct-17-2022 16:03:20", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	info: 123 "}"}
+{"timstamp" : "Oct-17-2022 16:12:08", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 16:22:53", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 17:49:32", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	info: 123 "}"}
+{"timstamp" : "Oct-17-2022 17:52:57", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 17:53:04", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	info: 123 "}{	"{loglevel:error},{m:erl}}
+{	"{loglevel:error},{m:erl}}
+{	"{loglevel:error},{m:erl}}
+"}
+{"timstamp" : "Oct-17-2022 17:53:34", "level" : "info", "message": "	{"timstamp" : "Oct-17-2022 15:15:38", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 15:15:39", "level" : "info", "message": "	info: 123 "}{	"{loglevel:error},{m:erl}}
+{	"{loglevel:error},{m:erl}}
+{	"{loglevel:error},{m:erl}}
+"}
+{"timstamp" : "Oct-17-2022 17:56:10", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 18:10:47", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 18:10:49", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 18:10:49", "level" : "info", "message": "	Server got : /!"}
+{"timstamp" : "Oct-17-2022 18:12:32", "level" : "info", "message": "	Server Started in port : 3000!"}
+{"timstamp" : "Oct-17-2022 18:13:11", "level" : "info", "message": "	Server Started in port : 3000!"}
