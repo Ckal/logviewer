@@ -1,8 +1,7 @@
 const express = require("express");
 const userRouts = require("./routes/users");
-const authRouts = require("./routes/auth");
 const app = express();
-const { appLogger } = require("./utils/logger");
+const { appLogger, onlineLogger } = require("./utils/logger");
 const port = 3000;
 var fs = require("fs");
 
@@ -18,13 +17,23 @@ app.get("/", (req, res, next) => {
 // API path to get current log
 app.get("/api/getlog", (req, res, next) => {
   let rawdata = fs.readFileSync("./logs/onlineLog.log");
-  let student = JSON.parse(rawdata);
-  let datas = {
-    data: student,
-  };
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.end(datas);
+  let student = JSON.stringify(rawdata);
+  let datas = { data: student };
+
+  //res.json(student);
+  res.writeHead(200, { "Content-Type": "text/json" });
+  res.end(rawdata);
+  return;
 });
+
+
+fs.readFile('results.json', function (err, data) {
+    var json = JSON.parse(data)
+    json.push('search result: ' + currentSearchResult)
+
+    fs.writeFile("results.json", JSON.stringify(json))
+})
+
 
 // API path to get current log
 app.get("/api/getlogs", (req, res, next) => {
@@ -35,7 +44,8 @@ app.get("/api/getlogs", (req, res, next) => {
 
 // API path to save to current log
 app.get("/api/savelog", (req, res, next) => {
-  appLogger.info(req.query.message);
+  onlineLogger.info(req.query.message);
+  res.json({ message: "200" });
   return;
 });
 
