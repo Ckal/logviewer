@@ -1,5 +1,4 @@
 const express = require("express");
-const userRouts = require("./routes/users");
 const app = express();
 const { appLogger, onlineLogger } = require("./utils/logger");
 const port = 3000;

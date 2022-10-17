@@ -1,5 +1,4 @@
 const { createLogger, format, transports } = require("winston");
-const winston = require("winston");
 
 const customFormat = format.combine(
   format.timestamp({ format: "MMM-DD-YYYY HH:mm:ss" }),
@@ -12,23 +11,7 @@ const customFormat = format.combine(
   )
 );
 
-const onlineFormat = format.combine(
-  format.timestamp({ format: "MMM-DD-YYYY HH:mm:ss" }),
-  format.align(),
-  format.printf((i) => `${i.message}`)
-);
-
-const usersLogger = createLogger({
-  transports: [
-    new transports.File({
-      filename: "logs/usersLog.log",
-      format: customFormat,
-    }),
-    new transports.Console({
-      format: customFormat,
-    }),
-  ],
-});
+const onlineFormat = format.combine(format.printf((i) => `${i.message}`));
 
 const onlineLogger = createLogger({
   transports: [
@@ -57,7 +40,6 @@ const appLogger = createLogger({
 });
 
 module.exports = {
-  usersLogger: usersLogger,
   onlineLogger: onlineLogger,
   appLogger: appLogger,
 };
