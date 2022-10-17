@@ -10,7 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Root path
-
 app.get("/", (req, res, next) => {
   res.json({ message: "Okese" });
   appLogger.info(`Server got : ${req.url}!`);
@@ -20,6 +19,11 @@ app.get("/", (req, res, next) => {
 app.get("/api/getlog", (req, res, next) => {
   var readable = fs.createReadStream("./logs/onlineLog.log");
   readable.pipe(res);
+  return;
+});
+// API path to save to current log
+app.get("/api/savelog", (req, res, next) => {
+  appLogger.info(req.query.message);
   return;
 });
 

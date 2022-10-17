@@ -1,5 +1,9 @@
 asd info: Oct-17-2022 12:35:53: 	Server got : /!
 {info: Oct-17-2022 12:37:13: 	Server got : /!}
-{info: {Oct-17-2022 12:38:36}: 	Server Started in port : 3000!}
-{info: {Oct-17-2022 12:38:39}: 	Server got : /!}
-{info: {Oct-17-2022 12:38:50}: 	Server got : /!}
+{info: {Oct-17-2022 12:39:08}: 	Server Started in port : 3000!}
+{info: Oct-17-2022 12:39:33: 	Server Started in port : 3000!}
+{info: Oct-17-2022 12:48:50: 	Server Started in port : 3000!}
+{info: Oct-17-2022 12:48:51: 	Server got : /!}
+{info: Oct-17-2022 12:48:52: 	Server got : /!}
+{info: Oct-17-2022 12:49:40: 	{message:"HAllo"}}
+{info: Oct-17-2022 12:49:56: 	{message:"HAllo"}}
