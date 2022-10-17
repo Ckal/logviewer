@@ -17,13 +17,9 @@ app.get("/", (req, res, next) => {
 // API path to get current log
 app.get("/api/getlog", (req, res, next) => {
   let rawdata = fs.readFileSync("./logs/onlineLog.log", "utf8");
-  //let student = JSON.parse(rawdata);
-  // student.data.push("www", "sdf");
-  let data = JSON.stringify(rawdata);
-  //fs.writeFileSync("./logs/onlineLog.log", data);
 
-  // var datas = JSON.stringify(student);
-  appLogger.info(rawdata);
+  let data = JSON.stringify(rawdata);
+
   let obj = {
     data: [],
   };
