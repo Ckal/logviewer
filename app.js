@@ -17,10 +17,22 @@ app.get("/", (req, res, next) => {
 
 // API path to get current log
 app.get("/api/getlog", (req, res, next) => {
+  let rawdata = fs.readFileSync("./logs/onlineLog.log");
+  let student = JSON.parse(rawdata);
+  let datas = {
+    data: student,
+  };
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.end(datas);
+});
+
+// API path to get current log
+app.get("/api/getlogs", (req, res, next) => {
   var readable = fs.createReadStream("./logs/onlineLog.log");
   readable.pipe(res);
   return;
 });
+
 // API path to save to current log
 app.get("/api/savelog", (req, res, next) => {
   appLogger.info(req.query.message);
