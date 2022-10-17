@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Root path
+
 app.get("/", (req, res, next) => {
   res.json({ message: "Okese" });
   appLogger.info(`Server got : ${req.url}!`);
