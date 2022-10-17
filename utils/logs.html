@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <link
+      href="https://nightly.datatables.net/css/jquery.dataTables.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+
+    <meta charset="utf-8" />
+    <title>DataTables - JS Bin</title>
+  </head>
+  <body>
+    asd
+    <div class="container">
+      <table id="example" class="display" width="100%"></table>
+    </div>
+    <script>
+      var columns = [];
+      function getDT() {
+        $.ajax({
+          url: "/api/getlog",
+          success: function (data) {
+            data = JSON.parse(data);
+            columnNames = Object.keys(data.data[0]);
+            for (var i in columnNames) {
+              columns.push({
+                data: columnNames[i],
+                title: capitalizeFirstLetter(columnNames[i])
+              });
+            }
+            $("#example").DataTable({
+              data: data.data,
+              columns: columns
+            });
+          }
+        });
+      }
+
+      function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
+
+      $(document).ready(function () {
+        getDT();
+      });
+    </script>
+  </body>
+</html>
