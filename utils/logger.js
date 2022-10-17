@@ -6,14 +6,16 @@ const customFormat = format.combine(
   format.align(),
   format.printf(
     (i) =>
-      `{"timstamp" : "${[i.timestamp]}", "level" : "${i.level}", "message": "${i.message}"}`
+      `{"timstamp" : "${[i.timestamp]}", "level" : "${i.level}", "message": "${
+        i.message
+      }"}`
   )
 );
 
 const onlineFormat = format.combine(
   format.timestamp({ format: "MMM-DD-YYYY HH:mm:ss" }),
   format.align(),
-  format.printf((i) => `{${i.message}}`)
+  format.printf((i) => `${i.message}`)
 );
 
 const usersLogger = createLogger({
