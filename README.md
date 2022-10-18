@@ -20,7 +20,7 @@ To finish it up there is nice bootstrap based landing page with usefull tipps an
 
 # Quick start guide 
 
-Click here to see it in action on Codesandbox.
+Click here to see it in action on Codesandbox. https://codesandbox.io/s/github/Ckal/logviewer
 
 - Run `npm install` to installl dependencies
 - Run `npm start` to start the local server
