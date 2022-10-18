@@ -85,4 +85,3 @@
 {"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
 {"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
 {"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
-{"timstamp " : "Oct-17-2022 17:56:10", "level" : "info", "message": " Server Started in port : 3000!"}
