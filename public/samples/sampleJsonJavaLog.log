@@ -1,0 +1,87 @@
+{"timestamp" : "2022-10-18T15:16:32.485Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-10-18T16:16:32.485Z","level" : "ERROR","thread" : "main","logger" : "private.sample","message" : "Server ERROR","context" : "default"}
+{"timestamp" : "2022-10-18T17:16:32.485Z","level" : "DEBUG","thread" : "main","logger" : "private.sample","message" : "Server DEBUG","context" : "default"}
+{"timestamp" : "2022-10-18T18:16:32.485Z","level" : "FINE","thread" : "main","logger" : "private.sample","message" : "Server FINE","context" : "default"}
+{"timestamp" : "2022-10-18T19:16:32.485Z","level" : "TRACE","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-10-18T20:16:32.485Z","level" : "FATAL","thread" : "main","logger" : "private.sample","message" : "Server FATAL","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:32.485Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:32.495Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:32.495Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:32.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+{"timestamp" : "2022-10-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some usefull message ... ","context" : "default"}
+
+{"timestamp" : "2022-11-18T15:16:32.485Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-11-18T16:16:32.485Z","level" : "ERROR","thread" : "main","logger" : "private.sample","message" : "Server ERROR","context" : "default"}
+{"timestamp" : "2022-11-18T17:16:32.485Z","level" : "DEBUG","thread" : "main","logger" : "private.sample","message" : "Server DEBUG","context" : "default"}
+{"timestamp" : "2022-11-18T18:16:32.485Z","level" : "FINE","thread" : "main","logger" : "private.sample","message" : "Server FINE","context" : "default"}
+{"timestamp" : "2022-11-18T19:16:32.485Z","level" : "TRACE","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-11-18T20:16:32.485Z","level" : "FATAL","thread" : "main","logger" : "private.sample","message" : "Server FATAL","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:32.485Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some other usefull message ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:32.495Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some other usefull message ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:32.495Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some other usefull message ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some other usefull message ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some other usefull message ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Something to search for ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:32.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Something to search for ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Something to search for ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Something to search for ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Something to search for ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Something to search for ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Something to search for ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Something to search for ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Something to search for ... ","context" : "default"}
+{"timestamp" : "2022-11-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Something to search for ... ","context" : "default"}
+
+{"timestamp" : "2022-12-18T15:16:32.485Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-12-18T16:16:32.485Z","level" : "ERROR","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-12-18T17:16:32.485Z","level" : "DEBUG","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-12-18T18:16:32.485Z","level" : "FINE","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-12-18T19:16:32.485Z","level" : "TRACE","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-12-18T20:16:32.485Z","level" : "FATAL","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:32.485Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "User started doing something .. ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:32.495Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "User started doing something .. ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:32.495Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "User started doing something .. ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "User started doing something .. ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "User started doing something .. ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "User started doing something .. ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:32.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some kind of process started ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some kind of process started ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some kind of process started ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some kind of process started ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some kind of process started ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some kind of process started ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some kind of process started ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some kind of process started ","context" : "default"}
+{"timestamp" : "2022-12-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Some kind of process started ","context" : "default"}
+
+{"timestamp" : "2022-18-18T15:16:32.485Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-18T16:16:32.485Z","level" : "ERROR","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-18T17:16:32.485Z","level" : "DEBUG","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-18T18:16:32.485Z","level" : "FINE","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-18T19:16:32.485Z","level" : "TRACE","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-18T20:16:32.485Z","level" : "FATAL","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:32.485Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:32.495Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:32.495Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:32.496Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:32.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
+{"timestamp" : "2022-18-19T15:16:33.497Z","level" : "INFO","thread" : "main","logger" : "private.sample","message" : "Server started","context" : "default"}
