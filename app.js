@@ -30,7 +30,8 @@ app.get("/api/getRawLog", (req, res, next) => {
     .replaceAll("\\n", "")
     .replaceAll("}{", "},{")
     .replaceAll('["{', "[{")
-    .replaceAll('}"]', "}]");
+    .replaceAll('}"]', "}]")
+    .replaceAll('":["', '":[');
   //res.json(data);
   //res.writeHead(200, { "Content-Type": "text/json" });
   res.write(data.removeCharAt(0).removeCharAt(data.lenght));
@@ -59,7 +60,8 @@ app.get("/api/getDataTableLog", (req, res, next) => {
     .replaceAll("\\n", "")
     .replaceAll("}{", "},{")
     .replaceAll('["{', "[{")
-    .replaceAll('}"]', "}]");
+    .replaceAll('}"]', "}]")
+    .replaceAll('":["', '":[');
   //res.json(data);
   //res.writeHead(200, { "Content-Type": "text/json" });
   res.write(data);
