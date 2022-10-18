@@ -1,43 +1,52 @@
-# logger-demo
+# loggviewer
 
-A Basic Node.js/Express REST API implementation example for logging.
+A node.js application to store and view logs.
+
 
 # Prerequisites
 
 - Node.js
 - NPM
 
-# Usage
+# Quick start guide 
 
 - Run `npm install` to installl dependencies
 - Run `npm start` to start the local server
-- Load `http://localhost:3000` to test the endpoint. It will display a json result `{"message":"Ok"}`
+- Load `http://localhost:3000` to test the endpoint. It will display a json result `{"message":"See https://github.com/Ckal/logviewer for more detials ... "}`
 
 # API Endpoints
 
-## POST /auth/signup
-
-user signup
+## GET /
+Some examples, usefull links, tipps and howto's.
 
 ```bash
 curl --header "Content-Type: application/json" \
- --request POST \
- --data '{"email":"yasas@gmail.com","password":"xyz"}' \
- http://localhost:3000/auth/signup
-```
-
-## GET /api/users
-
-Get a list of users -Not Authenticated
-
-```bash
-curl http://localhost:3000/api/users
-```
-
-Get a list of users - Authenticated
-
-```bash
-curl --header "Authorization: Bearer token" \
  --request GET \
- http://localhost:3000/api/users | json_pp
+ http://localhost:3000/
+```
+
+## GET /api/delteLog
+
+Deltes the current log. For a fresh start
+
+```bash
+curl http://localhost:3000/api/delteLog
+```
+
+## GET /api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a usefull sample"} 
+
+```bash
+curl http://localhost:3000/api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a usefull sample"}
+```
+
+## GET /logViewer
+See the logs in a nice table. The table columns are based on json attribute. -> You chose the columns by uploading json
+```bash
+curl http://localhost:3000/viewLog
+```
+
+## GET /viewRawLog
+See the logs in a nice table. The table columns are based on json attribute. -> You chose the columns by uploading json
+```bash
+curl http://localhost:3000/viewRawLog
 ```

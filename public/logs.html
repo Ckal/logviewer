@@ -11,18 +11,46 @@
     <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
 
     <meta charset="utf-8" />
-    <title>DataTables - JS Bin</title>
+    <title>DataTables </title>
+    
+    
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+
   </head>
-  <body>
-    asd
-    <div class="container">
-      <table id="example" class="display" width="100%"></table>
-    </div>
+  <body> 
+    
+        <div class="container">
+
+      <div class="table-responsive">
+        <table id="logTable" class="display table table-striped table-sm" width="100%">
+          
+        </table>
+      </div>
+      </div>
     <script>
       var columns = [];
       function getDT() {
         $.ajax({
-          url: "/api/getlog",
+          url: "/api/getDatatableLog",
           success: function (data) {
             data = JSON.parse(data);
             columnNames = Object.keys(data.data[0]);
@@ -32,7 +60,7 @@
                 title: capitalizeFirstLetter(columnNames[i])
               });
             }
-            $("#example").DataTable({
+            $("#logTable").DataTable({
               data: data.data,
               columns: columns
             });
@@ -48,5 +76,8 @@
         getDT();
       });
     </script>
+
+   <script src="bootstrap.bundle.min.js"></script>
+
   </body>
 </html>
