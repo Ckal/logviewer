@@ -26,13 +26,54 @@ Click here to see it in action on Codesandbox.
 - Run `npm start` to start the local server
 - Load `http://localhost:3000` to test the endpoint. It will display a json result `{"message":"See https://github.com/Ckal/logviewer for more detials ... "}`
 
-Open this link to see the  landing page with sample data.
+Open this link to see the landing page with sample data.
+http://localhost:3000/logviewer
 
 Open this link to delte the current log.
+http://localhost:3000/api/deleteLog
 
 Open this link to store a new log entry.
+http://localhost:3000/api/saveLog?message={%22timstamp%20%22%20:%20%22Oct-17-2022%2017:56:10%22,%20%22level%22%20:%20%22info%22,%20%22message%22:%20%22%20Server%20Started%20in%20port%20:%203000!%22}
 
 Have a look at the content of the iframe.
+http://localhost:3000/logViewerFrame
+
+The raw can be accesed by this link
+http://localhost:3000/api/getRawLog
+
+# Remote sample on Codesandbox
+
+https://tzfrxg-3000.preview.csb.app/logviewer
+
+
+# Configuration
+
+For Winston.js logger changes like retention see logger.js
+
+# Dependencies
+
+Dependencies can be found in package.json
+
+# Swagger
+
+Not available
+
+# Integration sample
+
+Integrate the log table in a other page by adding this iframe. (adjust the link src)
+
+```html
+<div style="position:relative;padding-top:56.25%;">
+<iframe src="./logViewerFrame" frameborder="0" allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:90%;"></iframe>
+</div>
+```
+
+Simple curl example to add a log entry
+
+```bash
+curl http://localhost:3000/api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a usefull sample"}
+```
 
 
 # API Endpoints
