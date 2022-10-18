@@ -90,6 +90,19 @@ app.get("/api/saveLog", (req, res, next) => {
 });
 
 // Root path
+app.get("/dashboard.js", (req, res, next) => {
+  fs.readFile("./public/dashboard.js", function (err, data) {
+    if (err) {
+      appLogger.info(`Server gotss : ${err}!` + err);
+      throw err;
+    }
+    res.writeHead(200, { "Content-Type": "text/javascript" });
+
+    res.end(data);
+    return;
+  });
+});
+// Root path
 app.get("/logViewer", (req, res, next) => {
   fs.readFile("./public/logViewer.html", function (err, data) {
     if (err) {
