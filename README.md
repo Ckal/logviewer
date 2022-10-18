@@ -10,7 +10,7 @@ The used bootstrap/datatable implementation is very flexible and can be used for
 
 To finish it up there is nice bootstrap based landing page with usefull tipps and tricks combining all together as a sample.
 
-![Screenshot](public/samples/LogViewerDashboardSample.PNG)
+![alt](LogViewerDashboardSample.PNG) 
 
 
 # Prerequisites
