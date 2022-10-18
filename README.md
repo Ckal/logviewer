@@ -41,6 +41,8 @@ http://localhost:3000/logViewerFrame
 The raw can be accesed by this link
 http://localhost:3000/api/getRawLog
 
+Replace the current logs with others sample data found under sample logs
+
 # Remote sample on Codesandbox
 
 https://tzfrxg-3000.preview.csb.app/logviewer
