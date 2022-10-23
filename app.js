@@ -4,6 +4,8 @@ const { appLogger, onlineLogger } = require("./utils/logger");
 const port = 3000;
 var fs = require("fs");
 
+// Monitoring the node.js
+app.use(require('express-status-monitor')());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
