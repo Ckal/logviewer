@@ -58,10 +58,12 @@ app.get("/api/getDataTableLog", (req, res, next) => {
     .replaceAll('\\"', '"')
     .replaceAll("\\t", "")
     .replaceAll("\\n", "")
+    .replaceAll('\\r', '')
     .replaceAll("}{", "},{")
     .replaceAll('["{', "[{")
     .replaceAll('}"]', "}]")
-    .replaceAll('":["', '":[');
+    .replaceAll('":["', '":[')
+    . replaceAll('}"]}', '}]}')     ;
   //res.json(data);
   //res.writeHead(200, { "Content-Type": "text/json" });
   res.write(data);
