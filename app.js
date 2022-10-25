@@ -1,4 +1,5 @@
 const express = require("express");
+const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -8,7 +9,7 @@ app.use(express.static("logs"));
 
 const port = 3000;
 
-const app = express();
+
 
 // TODO: make this part more dynamic 
 const { appLogger, onlineLogger } = require("./utils/logger");
