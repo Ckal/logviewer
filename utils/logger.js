@@ -5,7 +5,7 @@ const customFormat = format.combine(
   format.align(),
   format.printf(
     (i) =>
-      `{"timstamp" : "${[i.timestamp]}", "level" : "${i.level}", "message": "${
+      `{"timestamp" : "${[i.timestamp]}", "level" : "${i.level}", "message": "${
         i.message
       }"}`
   )
