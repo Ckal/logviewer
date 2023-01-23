@@ -88,21 +88,7 @@ app.get("/api/getDataTableLog", (req, res, next) => {
     data: [],
   };
   obj.data.push(rawdata);
-  data = JSON.stringify(obj)
-    .replaceAll('\\"', '"')
-    .replaceAll("\\t", "")
-    .replaceAll("\\n", "")
-    .replaceAll('\\r', '')
-    .replaceAll("}{", "},{")
-    .replaceAll('["{', "[{")
-    .replaceAll('}"]', "}]")
-    .replaceAll('":["', '":[')
-    . replaceAll('}"]}', '}]}')     ;
-  //res.json(data);
-  //res.writeHead(200, { "Content-Type": "text/json" });
-  res.write(data);
-  res.end();
-  return;
+  res.json(data);
 });
 
 // API path to get current log
