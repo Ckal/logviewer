@@ -173,7 +173,7 @@ app.get("/logs", (req, res) => {
       return;
     }
   // Get a list of all files in the public/logs folder
-  fs.readdir("./api/logs", (err, files) => {
+  fs.readdir("./logs", (err, files) => {
     if (err) {
       res.status(500).json({ error: "Unable to read logs directory" });
       return;

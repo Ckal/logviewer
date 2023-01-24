@@ -134,7 +134,7 @@ In conclusion, logging is an essential aspect of software development and operat
                      <div id="logs"></div>
                      <script>
                        // Fetch the logs from the API
-                       fetch("/logs?key=12341234")
+                       fetch("/logs")
                          .then(response => response.text())
                          .then(data => {
                            // Display the logs in the #logs div
@@ -151,12 +151,74 @@ In conclusion, logging is an essential aspect of software development and operat
                      </div>
                   </div>
                   <div id="reports" class="cover page container-fluid vh-100">
-                     <h1>reports</h1>
-                     <p>Try to scroll this page and look at the navigation bar while scrolling!</p>
+                     <h1>Reports</h1>
+                     <p><a href="public/reports/Lighthouse_1.pdf">Lighthouse</a></p>
                   </div>
                   <div id="integrations" class="cover page container-fluid vh-100">
-                     <h1>integrations</h1>
-                     <p>Try to scroll this page and look at the navigation bar while scrolling!</p>
+                     <h1>Integrations</h1>
+                     <p>Open this link to see the landing page with sample data. http://localhost:3000/logviewer
+
+                        Open this link to delete the current log. http://localhost:3000/api/deleteLog
+                        
+                        Open this link to store a new log entry. http://localhost:3000/api/saveLog?message={%22timstamp%20%22%20:%20%22Oct-17-2022%2017:56:10%22,%20%22level%22%20:%20%22info%22,%20%22message%22:%20%22%20Server%20Started%20in%20port%20:%203000!%22}
+                        
+                        Have a look at the content of the iframe. http://localhost:3000/logViewerFrame
+                        
+                        The raw can be accessed by this link http://localhost:3000/api/getRawLog
+                        
+                        Replace the current logs with others sample data found under sample logs
+                     </p>
+
+                     Integrate the log table in a other page by adding this iframe. (adjust the link src)
+
+<div style="position:relative;padding-top:56.25%;">
+<iframe src="./logViewerFrame" frameborder="0" allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:90%;"></iframe>
+</div>
+Simple curl example to add a log entry
+
+<code>
+curl http://localhost:3000/api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a usefull sample"}
+API Endpoints
+Here are some sample cURL commands for the API calls defined in the OpenAPI specification:
+
+GET /
+Get the log viewer dashboard:
+
+curl -X GET "http://localhost:3000?key=YOUR_API_KEY"
+GET /logViewer
+See the logs in a nice table. The table columns are based on json attribute. -> You chose the columns by uploading json
+
+curl http://localhost:3000/viewLog
+GET /info
+Get API information:
+
+curl -X GET "http://localhost:3000/info"
+GET /api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a useful sample"}
+curl http://localhost:3000/api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a useful sample"}
+GET api/getRawDataLog
+Get the raw log data:
+
+curl -X GET "http://localhost:3000/api/getRawLog?key=YOUR_API_KEY&filename=onlineLog"
+GET api/getDataTableLog
+Get the log data in a format optimized for a data table:
+
+curl -X GET "http://localhost:3000/api/getDataTableLog?key=YOUR_API_KEY&filename=onlineLog"
+DELTE api/deleteLog
+Delete a specific log file:
+
+curl -X DELETE "http://localhost:3000/api/deleteLog?key=YOUR_API_KEY&filename=onlineLog"
+GET /api/delteLog
+Deltes the current log. For a fresh start
+
+curl http://localhost:3000/api/delteLog
+GET /logs
+Retrieves a list of log files in the public/logs folder and returns them as HTML download links:
+
+curl -X GET "http://localhost:3000/logs?key=YOUR_API_KEY"
+Note that in the above examples, you should replace "YOUR_API_KEY" with the actual value of your API key. If not specified (via env. variables it open for all) Same for host. If not specified the filename default to onlineLog.log. There is get implementation for all call so they can be tested via the browser.
+
+</code>
                   </div>
                </div>
             </div>
