@@ -128,8 +128,19 @@ In conclusion, logging is an essential aspect of software development and operat
                      <br><br><br><br><br><br>
                   </div>
                   <div id="log" class="cover page container-fluid vh-100">
-                     <h1>log</h1>
-                     <p>Try to scroll this page and look at the navigation bar while scrolling!</p>
+                     <h1>Online Logs</h1>
+                     <p> </p>
+
+                     <div id="logs"></div>
+                     <script>
+                       // Fetch the logs from the API
+                       fetch("/logs?key=12341234")
+                         .then(response => response.text())
+                         .then(data => {
+                           // Display the logs in the #logs div
+                           document.getElementById("logs").innerHTML = data;
+                         });
+                     </script>
                   </div>
                   <div id="stats" class="cover page container-fluid vh-100">
                      <h1>Node Express Status</h1>
