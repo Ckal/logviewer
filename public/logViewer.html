@@ -171,14 +171,19 @@ In conclusion, logging is an essential aspect of software development and operat
 
                      Integrate the log table in a other page by adding this iframe. (adjust the link src)
 
+                     <code>
 <div style="position:relative;padding-top:56.25%;">
 <iframe src="./logViewerFrame" frameborder="0" allowfullscreen
     style="position:absolute;top:0;left:0;width:100%;height:90%;"></iframe>
 </div>
+</code>
+
 Simple curl example to add a log entry
 
 <code>
-curl http://localhost:3000/api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a usefull sample"}
+   curl http://localhost:3000/api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a usefull sample"}
+</code>
+
 API Endpoints
 Here are some sample cURL commands for the API calls defined in the OpenAPI specification:
 
