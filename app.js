@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 const { createLogger, format, transports } = require("winston");
 const customFormat = format.combine(
   format.timestamp({ format: "MMM-DD-YYYY HH:mm:ss" }),
@@ -58,12 +61,7 @@ app.use(
 //        Root path  - opens the Dashboard Page         //
 // ///////////////////////////////////////////////////////
 app.get("/", (req, res, next) => {
-  if (!process.env.API_KEY) {
-    console.log("API_KEY is not defined");
-  } else {
-    console.log("API_KEY is defined");
-    // use process.env.API_KEY in your code
-  }
+  checkIfApiKEyIsPresent();
 
   fs.readFile("./public/logViewer.html", function (err, data) {
     if (err) {
@@ -101,16 +99,7 @@ app.get("/api/getRawLog", (req, res, next) => {
   res.set("Content-Type", "text/plain");
   res.send(rawdata);
 });
-
-
-
-String.prototype.removeCharAt = function (i) {
-  var tmp = this.split(""); // convert to an array
-  tmp.splice(i - 1, 1); // remove 1 element from the array (adjusting for non-zero-indexed counts)
-  return tmp.join(""); // reconstruct the string
-};
-
-// API path to get current datatable log
+// API path to get current log, optimized for datatable.
 app.get("/api/getDataTableLog", (req, res, next) => {
   // Check if the provided API key is valid
   if (req.query.key !== process.env.API_KEY) {
@@ -144,9 +133,6 @@ app.get("/api/getDataTableLog", (req, res, next) => {
   res.end();
   return;
 });
-
- 
-
 // API to delete the current log 
 app.get("/api/deleteLog", (req, res, next) => {
   // Check if the provided API key is valid
@@ -154,22 +140,58 @@ app.get("/api/deleteLog", (req, res, next) => {
     res.status(401).json({ error: "Invalid API key" });
     return;
   }
-
   // Get the specified filename or use the default
   let filename = req.query.filename || "onlineLog";
-
   // Read the specified log file
-   
-
   fs.writeFile("./logs/"+filename+".log", "", function () {
   console.log("done");
   });
   res.send("Log deleted")
   return;
   });
+// API to delete the current log 
+app.delete("/api/deleteLog", (req, res, next) => {
+  // Check if the provided API key is valid
+  if (req.query.key !== process.env.API_KEY) {
+    res.status(401).json({ error: "Invalid API key" });
+    return;
+  }
+  // Get the specified filename or use the default
+  let filename = req.query.filename || "onlineLog";
+  // Read the specified log file
+  fs.writeFile("./logs/"+filename+".log", "", function () {
+    console.log("done");
+  });
+  res.send("Log deleted")
+  return;
+});
 
+app.get("/logs", (req, res) => {
+    // Check if the provided API key is valid
+    if (req.query.key !== process.env.API_KEY) {
+      res.status(401).json({ error: "Invalid API key" });
+      return;
+    }
+  // Get a list of all files in the public/logs folder
+  fs.readdir("./api/logs", (err, files) => {
+    if (err) {
+      res.status(500).json({ error: "Unable to read logs directory" });
+      return;
+    }
 
+    // Filter out any non-log files
+    const logFiles = files.filter((file) => file.endsWith(".log"));
 
+    // Create HTML links for each log file
+    let links = "";
+    for (const file of logFiles) {
+      links += `<a href="/logs/${file}">${file}</a><br>`;
+    }
+
+    // Send the HTML links as the response
+    res.send(links);
+  });
+});
 // API path to save to current log
 app.get("/api/saveLog", (req, res, next) => {
   // check if the API key is valid, only if available
@@ -178,8 +200,6 @@ app.get("/api/saveLog", (req, res, next) => {
     res.status(401).json({ message: "Invalid API key" });
     return;
   }
-
- 
   // Get the specified filename or use the default
   let filename = req.query.filename || "onlineLog";
 
@@ -203,8 +223,38 @@ app.get("/api/saveLog", (req, res, next) => {
 
   res.json({ message: "Log saved successfully" });
 });
+// API path to save to current log
+app.post("/api/saveLog", (req, res, next) => {
+  // check if the API key is valid, only if available
+  console.log(process.env.API_KEY);
+  if (req.body.api_key !== process.env.API_KEY) {
+    res.status(401).json({ message: "Invalid API key" });
+    return;
+  }
+  // Get the specified filename or use the default
+  let filename = req.body.filename || "onlineLog";
 
-// Root path
+  // create a logger for the specified log file
+  const logger = createLogger({
+    transports: [
+      new transports.File({
+        filename: `logs/${req.body.log_file}.log`,
+        format: customFormat,
+        json: true,
+        stringify: (obj) => JSON.stringify(obj),
+      }),
+      new transports.Console({
+        format: customFormat,
+      }),
+    ],
+  });
+
+  // log the message to the specified log file
+  logger.info(req.body.message);
+
+  res.json({ message: "Log saved successfully" });
+});
+
 app.get("/dashboard.js", (req, res, next) => {
   fs.readFile("./public/dashboard.js", function (err, data) {
     if (err) {
@@ -237,3 +287,15 @@ app.get("/logViewerFrame", (req, res, next) => {
 app.listen(port, () => {
   appLogger.info("Server Started in port : ${port}!");
 });
+
+function checkIfApiKEyIsPresent() {
+  if (!process.env.API_KEY) {
+    console.log("API_KEY is not defined");
+    return false;
+  } else {
+    console.log("API_KEY is defined");
+    return true;
+    // use process.env.API_KEY in your code
+  }
+}
+

@@ -116,3 +116,27 @@ See the logs in a nice table. The table columns are based on json attribute. -> 
 ```bash
 curl http://localhost:3000/viewRawLog
 ```
+Here are some sample cURL commands for the API calls defined in the OpenAPI specification:
+
+Get the log viewer dashboard:
+Copy code
+curl -X GET "http://localhost:3000?key=YOUR_API_KEY"
+Get API information:
+Copy code
+curl -X GET "http://localhost:3000/info"
+Get the raw log data:
+Copy code
+curl -X GET "http://localhost:3000/api/getRawLog?key=YOUR_API_KEY&filename=onlineLog"
+Get the log data in a format optimized for a data table:
+Copy code
+curl -X GET "http://localhost:3000/api/getDataTableLog?key=YOUR_API_KEY&filename=onlineLog"
+Delete a specific log file:
+Copy code
+curl -X DELETE "http://localhost:3000/api/deleteLog?key=YOUR_API_KEY&filename=onlineLog"
+Retrieves a list of log files in the public/logs folder and returns them as HTML download links:
+Copy code
+curl -X GET "http://localhost:3000/logs?key=YOUR_API_KEY"
+Note that in the above examples, you should replace "YOUR_API_KEY" with the actual value of your API key.
+
+
+

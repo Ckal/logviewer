@@ -1,0 +1,198 @@
+openapi: 3.0.0
+info:
+  version: '2.0.0'
+  title: Log Viewer API
+  description: An API for viewing and managing log files
+  contact:
+    name: Christof Kaller
+    email: Christof.Kaller@gmail.com
+    url: https://github.com/Ckal
+servers:
+  - url: http://localhost:3000
+  - url: https://qml5x3.sse.codesandbox.io/
+paths:
+  /:
+    get:
+      summary: Get the log viewer dashboard
+      operationId: getLogViewerDashboard
+      security:
+        - apiKey: []
+      responses:
+        '200':
+          description: Dashboard HTML page
+  /info:
+    get:
+      summary: Get API information
+      operationId: getApiInfo
+      responses:
+        '200':
+          description: API information
+  /api/getRawLog:
+    get:
+      summary: Get the raw log data
+      operationId: getRawLog
+      parameters:
+        - name: key
+          in: query
+          required: true
+          description: API key
+        - name: filename
+          in: query
+          required: false
+          description: Log file name (default: onlineLog)
+      security:
+        - apiKey: []
+      responses:
+        '200':
+          description: Raw log data
+        '401':
+          description: Invalid API key
+  /api/getDataTableLog:
+    get:
+      summary: Get the log data in a format optimized for a data table
+      operationId: getDataTableLog
+      parameters:
+        - name: key
+          in: query
+          required: true
+          description: API key
+        - name: filename
+          in: query
+          required: false
+          description: Log file name (default: onlineLog)
+      security:
+        - apiKey: []
+      responses:
+        '200':
+          description: Log data in a format optimized for a data table
+        '401':
+          description: Invalid API key 
+  /api/deleteLog:
+    get:
+      summary: Delete a specific log file
+      parameters:
+        - name: key
+          in: query
+          required: true
+          description: API key for authentication
+          schema:
+            type: string
+        - name: filename
+          in: query
+          required: false
+          description: The name of the log file to be deleted, without the file extension. If not provided, the default is "onlineLog"
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Log file deleted
+        '401':
+          description: Invalid API key
+        '500':
+          description: Unable to delete log file
+
+  /api/deleteLog:  
+      delete:
+        summary: Delete the current log file
+        operationId: deleteLog
+        parameters:
+          - name: key
+            in: query
+            required: true
+            description: API key
+          - name: filename
+            in: query
+            required: false
+            description: Log file name (default: onlineLog)
+        security:
+          - apiKey: []
+        responses:
+          '200':
+            description: Log file deleted
+          '401':
+          content:
+            application/json:
+            schema:
+            type: object
+            properties:
+            error:
+              type: string
+              example: "Invalid API key" 
+  /logs:
+    get:
+      description: Retrieves a list of log files in the public/logs folder and returns them as HTML download links.
+      parameters:
+        - name: key
+          in: query
+          required: true
+          description: API key for authentication
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Log files retrieved successfully
+          content:
+            text/html:
+              schema:
+                type: string
+        '401':
+          description: Invalid API key provided
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid API key
+        '500':
+          description: Unable to read logs directory
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Unable to read logs directory     
+  /api/saveLog:
+    get:
+      summary: Save a log file
+      parameters:
+        - in: query
+          name: key
+          required: true
+          description: API key for authentication
+        - in: query
+          name: filename
+          required: false
+          description: The name for the log file to be saved, defaults to onlineLog.log
+      responses:
+        '200':
+          description: Log file saved
+        '401':
+          description: Invalid API key
+        '500':
+          description: Unable to save log file
+
+  /api/saveLog:
+    post:
+      summary: Save a log file with a specified name
+      parameters:
+        - in: query
+          name: key
+          required: true
+          description: API key for authentication
+        - in: body
+          name: log
+          required: true
+          description: Log data to be saved
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Log file saved
+        '401':
+          description: Invalid API key
+        '500':
+          description: Error saving log file
