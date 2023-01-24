@@ -85,23 +85,24 @@ app.get("/info", (req, res, next) => {
 
 // get Raw current OnlineLog.log
 app.get("/api/getRawLog", (req, res, next) => {
-  let rawdata = fs.readFileSync("./logs/onlineLog.log", "utf8");
+  // Check if the provided API key is valid
+  if (req.query.key !== process.env.API_KEY) {
+    res.status(401).json({ error: "Invalid API key" });
+    return;
+  }
 
-  data = JSON.stringify(rawdata)
+  // Get the specified filename or use the default
+  let filename = req.query.filename || "onlineLog";
 
-    .replaceAll('\\"', '"')
-    .replaceAll("\\t", "")
-    .replaceAll("\\n", "")
-    .replaceAll("}{", "},{")
-    .replaceAll('["{', "[{")
-    .replaceAll('}"]', "}]")
-    .replaceAll('":["', '":[');
-  //res.json(data);
-  res.writeHead(200, { "Content-Type": "text/json" });
-  res.write(data.removeCharAt(0).removeCharAt(data.lenght));
-  res.end();
-  return;
+  // Read the specified log file
+  let rawdata = fs.readFileSync("./logs/"+filename+".log", "utf8");
+
+  // Return the raw log data as text
+  res.set("Content-Type", "text/plain");
+  res.send(rawdata);
 });
+
+
 
 String.prototype.removeCharAt = function (i) {
   var tmp = this.split(""); // convert to an array
@@ -111,7 +112,17 @@ String.prototype.removeCharAt = function (i) {
 
 // API path to get current datatable log
 app.get("/api/getDataTableLog", (req, res, next) => {
-  let rawdata = fs.readFileSync("./logs/onlineLog.log", "utf8");
+  // Check if the provided API key is valid
+  if (req.query.key !== process.env.API_KEY) {
+    res.status(401).json({ error: "Invalid API key" });
+    return;
+  }
+
+  // Get the specified filename or use the default
+  let filename = req.query.filename || "onlineLog";
+
+  // Read the specified log file
+  let rawdata = fs.readFileSync("./logs/"+filename+".log", "utf8");
 
   let data = JSON.stringify(rawdata);
 
@@ -134,37 +145,43 @@ app.get("/api/getDataTableLog", (req, res, next) => {
   return;
 });
 
-// API path to get current log
-app.get("/api/getRawLogs", (req, res, next) => {
-  var readable = fs.createReadStream("./logs/onlineLog.log");
-  readable.pipe(res);
-  return;
-});
+ 
 
-// API to delete the current log
+// API to delete the current log 
 app.get("/api/deleteLog", (req, res, next) => {
-  fs.writeFile("./logs/onlineLog.log", "", function () {
-    console.log("done");
+  // Check if the provided API key is valid
+  if (req.query.key !== process.env.API_KEY) {
+    res.status(401).json({ error: "Invalid API key" });
+    return;
+  }
+
+  // Get the specified filename or use the default
+  let filename = req.query.filename || "onlineLog";
+
+  // Read the specified log file
+   
+
+  fs.writeFile("./logs/"+filename+".log", "", function () {
+  console.log("done");
   });
+  res.send("Log deleted")
   return;
-});
+  });
+
+
 
 // API path to save to current log
 app.get("/api/saveLog", (req, res, next) => {
-  // check if the API key is valid
+  // check if the API key is valid, only if available
   console.log(process.env.API_KEY);
   if (req.query.api_key !== process.env.API_KEY) {
     res.status(401).json({ message: "Invalid API key" });
     return;
   }
 
-  // check if the log file name is provided
-  if (!req.query.log_file) {
-    res.status(400).json({
-      message: process.env.API_KEY + "Missing log file name parameter",
-    });
-    return;
-  }
+ 
+  // Get the specified filename or use the default
+  let filename = req.query.filename || "onlineLog";
 
   // create a logger for the specified log file
   const logger = createLogger({
