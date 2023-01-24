@@ -185,7 +185,7 @@ app.get("/logs", (req, res) => {
     // Create HTML links for each log file
     let links = "";
     for (const file of logFiles) {
-      links += `<a href="/logs/${file}">${file}</a><br>`;
+      links += `<a href="/${file}">${file}</a><br>`;
     }
 
     // Send the HTML links as the response
