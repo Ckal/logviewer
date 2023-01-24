@@ -11,7 +11,7 @@
     <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
 
     <meta charset="utf-8" />
-    <title>DataTables </title>
+    <title>Online Log Viewer</title>
     
     
     <!-- Bootstrap core CSS -->
@@ -34,7 +34,7 @@
       </div>
       </div>
     <script>
-      var columns = [];
+     var columns = [];
       function getDT() {
         $.ajax({
           url: "/api/getDatatableLog",
@@ -54,6 +54,9 @@
           }
         });
       }
+
+
+
 
       function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
