@@ -18,6 +18,7 @@ const onlineLogger = createLogger({
     new transports.File({
       filename: "logs/onlineLog.log",
       format: onlineFormat,
+      json: true,
     }),
     new transports.Console({
       format: onlineFormat,
@@ -31,7 +32,7 @@ const appLogger = createLogger({
       filename: "logs/appLog.log",
       format: customFormat,
       json: true,
-      stringify: (obj) => JSON.stringify(obj),
+      stringify: true,
     }),
     new transports.Console({
       format: customFormat,
