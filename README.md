@@ -56,7 +56,7 @@ Dependencies can be found in package.json
 
 # Swagger
 
-Not available
+[OpenAPI 3.0.0](https://github.com/Ckal/logviewer/blob/main/openAPI.yaml)
 
 # Integration sample
 
@@ -76,29 +76,16 @@ curl http://localhost:3000/api/saveLog?message={"log.level":"info","timestamp":"
 ```
 
 # API Endpoints
+ 
+
+Here are some sample cURL commands for the API calls defined in the OpenAPI specification:
+
 
 ## GET /
-
-Some examples, usefull links, tipps and howto's.
-
-```bash
-curl --header "Content-Type: application/json" \
- --request GET \
- http://localhost:3000/
-```
-
-## GET /api/delteLog
-
-Deltes the current log. For a fresh start
+Get the log viewer dashboard:
 
 ```bash
-curl http://localhost:3000/api/delteLog
-```
-
-## GET /api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a usefull sample"}
-
-```bash
-curl http://localhost:3000/api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a usefull sample"}
+curl -X GET "http://localhost:3000?key=YOUR_API_KEY"
 ```
 
 ## GET /logViewer
@@ -109,34 +96,53 @@ See the logs in a nice table. The table columns are based on json attribute. -> 
 curl http://localhost:3000/viewLog
 ```
 
-## GET /viewRawLog
+## GET /info
+Get API information:
+```bash
+curl -X GET "http://localhost:3000/info"
+```
 
-See the logs in a nice table. The table columns are based on json attribute. -> You chose the columns by uploading json
+## GET /api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a useful sample"}
 
 ```bash
-curl http://localhost:3000/viewRawLog
+curl http://localhost:3000/api/saveLog?message={"log.level":"info","timestamp":"today","message":"This is a useful sample"}
 ```
-Here are some sample cURL commands for the API calls defined in the OpenAPI specification:
 
-Get the log viewer dashboard:
-Copy code
-curl -X GET "http://localhost:3000?key=YOUR_API_KEY"
-Get API information:
-Copy code
-curl -X GET "http://localhost:3000/info"
+
+## GET api/getRawDataLog
 Get the raw log data:
-Copy code
+```bash
 curl -X GET "http://localhost:3000/api/getRawLog?key=YOUR_API_KEY&filename=onlineLog"
+```
+
+## GET api/getDataTableLog
 Get the log data in a format optimized for a data table:
-Copy code
+```bash
 curl -X GET "http://localhost:3000/api/getDataTableLog?key=YOUR_API_KEY&filename=onlineLog"
+```
+
+## DELTE api/deleteLog
 Delete a specific log file:
-Copy code
+```bash
 curl -X DELETE "http://localhost:3000/api/deleteLog?key=YOUR_API_KEY&filename=onlineLog"
+```
+
+## GET /api/delteLog
+
+Deltes the current log. For a fresh start
+
+```bash
+curl http://localhost:3000/api/delteLog
+```
+
+
+## GET /logs
 Retrieves a list of log files in the public/logs folder and returns them as HTML download links:
-Copy code
+```bash
 curl -X GET "http://localhost:3000/logs?key=YOUR_API_KEY"
-Note that in the above examples, you should replace "YOUR_API_KEY" with the actual value of your API key.
+```
+
+Note that in the above examples, you should replace "YOUR_API_KEY" with the actual value of your API key. If not specified (via env. variables it open for all) Same for host. If not specified the filename default to onlineLog.log. There is get implementation for all call so they can be tested via the browser.
 
 
 
